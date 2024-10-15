@@ -45,9 +45,9 @@
 
         <div class="paper">
           <h2 style="margin-bottom: 10px;">input</h2>
-          
-          <div style="display: flex; gap: 12px; width: 100%;">
-            <div style=" width: 100%;">
+
+          <div class="flex flex_md">
+            <div>
               <!-- input_wrap start -->
               <div class="input_wrap">
                 <div class="item_title">text</div>
@@ -65,7 +65,7 @@
                   <div class="item_title">text</div>
                   <input type="date" name="" id="">
 
-                  <div class="clalender_wrap">
+                  <div class="flex_sm">
                     <input type="date" name="" id=""> ~ 
                     <input type="date" name="" id="">
                   </div>
@@ -74,15 +74,15 @@
               <!-- input_wrap end -->
             </div>
 
-            <div style=" width: 100%;">
+            <div>
               <!-- input_wrap start -->
               <div class="input_wrap">
-                <div class="item_title">text</div>
+                <div class="item_title essential">text</div>
                 <textarea name="" id=""></textarea>
               </div>
     
-              <div class="input_wrap" style="width: 100%;">
-                <div class="item_title">text</div>
+              <div class="input_wrap">
+                <div class="item_title essential">text</div>
                 <div class="file_wrap">
                   <input id="upload" type="file" multiple>
                   <label class="file_btn" for="upload">파일선택</label>
@@ -308,8 +308,8 @@
             <!-- card start -->
             <div class="card">
               <div class="card_head">
-                <p>card title</p>
-                <span class="hint">hint text</span>
+                <div class="subtitle02">card title</div>
+                <span class="caption">hint text</span>
                 <span class="material-symbols-outlined icon">
                   arrow_right_alt
                 </span>
@@ -322,10 +322,11 @@
           </div>
           <div class="tab_content" id="tab2"> 
             <div class="card_wrap">
+              <!-- card start -->
               <div class="card">
                 <div class="card_head">
-                  <p>card title</p>
-                  <span class="hint">hint text</span>
+                  <div class="subtitle02">card title</div>
+                  <span class="caption">hint text</span>
                   <span class="material-symbols-outlined icon">
                     arrow_right_alt
                   </span>
@@ -334,10 +335,12 @@
                   card
                 </div>
               </div>
+              <!-- card end -->
+              <!-- card start -->
               <div class="card">
                 <div class="card_head">
-                  <p>card title</p>
-                  <span class="hint">hint text</span>
+                  <div class="subtitle02">card title</div>
+                  <span class="caption">hint text</span>
                   <span class="material-symbols-outlined icon">
                     arrow_right_alt
                   </span>
@@ -346,10 +349,12 @@
                   card
                 </div>
               </div>
+              <!-- card end -->
+               <!-- card start -->
               <div class="card">
                 <div class="card_head">
-                  <p>card title</p>
-                  <span class="hint">hint text</span>
+                  <div class="subtitle02">card title</div>
+                  <span class="caption">hint text</span>
                   <span class="material-symbols-outlined icon">
                     arrow_right_alt
                   </span>
@@ -358,6 +363,7 @@
                   card
                 </div>
               </div>
+              <!-- card end -->
             </div>
           </div>
           <div class="tab_content" id="tab3">
@@ -371,13 +377,23 @@
           <h2 style="margin-bottom: 10px; margin-top: 30px;">accordion</h2>
           <!-- accordion start-->
           <div class="accordion">
-            <details>
+            <details open>
               <summary>
                 title
                 <span class="hint">hint text</span>
               </summary>
               <div class="accordion_body">
-                바디바디
+              
+                <div class="item_list">
+                  <div class="item_desc">
+                    <div class="subtitle02">text</div>
+                    <span class="caption">text</span>
+                  </div>
+                  <select name="" id="">
+                    <option value="">text</option>
+                  </select>
+                </div>
+              
               </div>
             </details>
           </div>
