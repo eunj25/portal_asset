@@ -13,16 +13,54 @@
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/reset.css">
   <script src="/script/custom.js"></script>
-  
-  <style>
-    .input_wrap {
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
 
   <div data-include-path="include/header.html"></div>
+  
+  <div class="bg"></div>
+
+  <!-- modal start -->
+  <div class="modal position_center" id="prompt">
+    <div class="modal_head">
+      title
+    </div>
+    <div class="modal_body">
+      <div class="modal_desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum temporibus eligendi nulla! Eos nulla mollitia laboriosam autem eaque. Quo assumenda cupiditate id quia saepe, placeat totam suscipit temporibus laudantium libero.
+        <textarea name="" id=""></textarea>
+      </div>
+      <div class="btn_area">
+        <button class="bk_outline sm" id="closeModal">취소</button>
+        <button class="bk sm" id="checkModal">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- modal end -->
+
+  <div class="modal position_center" id="confirm">
+    <div class="modal_body">
+      <div class="modal_desc">
+        confirm <br> 확실합니까?
+      </div>
+      <div class="btn_area">
+        <button class="bk_outline sm" id="closeModal">취소</button>
+        <button class="bk sm" id="checkModal">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal position_center" id="alert">
+    <div class="modal_body">
+      <div class="modal_desc">
+        alert <br> 확인했습니다
+      </div>
+      <div class="btn_area">
+        <button class="bk sm" id="checkModal">확인</button>
+      </div>
+    </div>
+  </div>
+
   
   <main>
     <div data-include-path="include/menu.html"></div> 
@@ -36,7 +74,7 @@
           <p id="page-hint"></p>
         </div>
         <div class="page_btn">
-          <button class="bk sm">click me</button>
+          <button class="bk sm" id="openModal">click me</button>
         </div>
       </div>
       <!-- pageHeader end -->

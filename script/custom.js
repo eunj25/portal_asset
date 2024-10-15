@@ -65,3 +65,21 @@ document.addEventListener("DOMContentLoaded", function() {
   tabButtons.forEach(button => button.addEventListener("click", switchTab));
 });
 
+// modal
+$(document).ready(function() {
+
+  $('#openModal').on('click', function() {
+    $('.bg').fadeIn(200);
+    $('#prompt').fadeIn(200);
+  });
+
+  $('#prompt #closeModal, .bg').on('click', function() {
+    $('.bg').fadeOut(200);
+    $('#prompt').fadeOut(200);
+  });
+  $('#prompt #checkModal').on('click', function() {
+    $('.bg').fadeOut(200);
+    $('#prompt').fadeOut(200);
+  });
+  
+});

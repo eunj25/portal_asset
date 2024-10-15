@@ -17,6 +17,25 @@
 <body>
 
   <div data-include-path="include/header.html"></div>
+
+  <div class="bg"></div>
+  <!-- modal start -->
+  <div class="modal position_center" id="prompt">
+    <div class="modal_head">
+      title
+    </div>
+    <div class="modal_body">
+      <div class="modal_desc">
+        자동화가 불가한 사유를 입력 바랍니다.
+        <textarea name="" id=""></textarea>
+      </div>
+      <div class="btn_area">
+        <button class="bk_outline sm" id="closeModal">취소</button>
+        <button class="bk sm" id="checkModal">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- modal end -->
   
   <main>
     <div data-include-path="include/menu.html"></div> 
@@ -32,7 +51,7 @@
         <div class="page_btn">
           <button class="bk_outline sm">목록</button>
           <button class="bk sm">임시저장</button>
-          <button class="bk sm">반려</button>
+          <button class="bk sm" id="openModal">반려</button>
           <button class="bl sm">제출</button>
         </div>
       </div>

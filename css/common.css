@@ -359,6 +359,10 @@ textarea:focus {
   --menu-width: 280px;
   --header-height: 60px;
 
+  --modal-min-width: 420px;
+  --modal-max-width: 520px;
+  --modal-max-height: 800px;
+
   /* padding */
   --space-4: 4px;
   --space-6: 6px;
@@ -373,6 +377,14 @@ textarea:focus {
   --th-padding: 6px 8px;
   --td-padding: 6px 10px;
   --search-padding: 12px 18px;
+}
+
+.position_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
 .flex_lg {
@@ -665,7 +677,7 @@ table .btn_area {
   background-color: var(--wh);
   flex: 1;
 }
-.card .card_head{
+.card .card_head {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -678,6 +690,63 @@ table .btn_area {
 }
 .card .card_body{
   padding: var(--space-12);
+}
+
+.bg {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #33333375;
+  display: none;
+}
+
+.modal {
+  min-width: var(--modal-min-width);
+  max-width: var(--modal-max-width);
+  background-color: var(--wh);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  display: none;
+}
+.modal_head {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: var(--space-10);
+  padding: var(--space-12);
+  border-bottom: var(--border);
+  font-weight: 700;
+}
+.modal_body {
+  padding: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+.modal_desc {
+  width: 100%;
+  max-height: var(--modal-max-height);
+  /* overflow-y: scroll; */
+  text-wrap: pretty;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+.modal .btn_area {
+  text-align: right;
+}
+
+.modal#confirm {
+  text-align: center;
+}
+.modal#confirm .btn_area {
+  text-align: center;
+  width: 100%;
 }
 
 /* accordion */
