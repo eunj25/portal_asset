@@ -37,30 +37,6 @@
     </div>
   </div>
   <!-- modal end -->
-
-  <div class="modal position_center" id="confirm">
-    <div class="modal_body">
-      <div class="modal_desc">
-        confirm <br> 확실합니까?
-      </div>
-      <div class="btn_area">
-        <button class="bk_outline sm" id="closeModal">취소</button>
-        <button class="bk sm" id="checkModal">확인</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal position_center" id="alert">
-    <div class="modal_body">
-      <div class="modal_desc">
-        alert <br> 확인했습니다
-      </div>
-      <div class="btn_area">
-        <button class="bk sm" id="checkModal">확인</button>
-      </div>
-    </div>
-  </div>
-
   
   <main>
     <div data-include-path="include/menu.html"></div> 
@@ -89,12 +65,16 @@
               <!-- input_wrap start -->
               <div class="input_wrap">
                 <div class="item_title">text</div>
-                <input type="text">
+                <input type="text" placeholder="text">
+              </div>
+              <div class="input_wrap">
+                <div class="item_title">text</div>
+                <input type="text" placeholder="text" required>
               </div>
     
               <div class="input_wrap">
                 <div class="item_title">text</div>
-                <select name="" id="">
+                <select name="" id="" disabled>
                   <option value="">전체</option>
                   <option value="">선택</option>
                 </select>
@@ -248,7 +228,7 @@
               </div>
             </div>
             <!-- table_top_wrap end -->
-            
+
             <!-- table_wrap start -->
             <div class="table_wrap">
               <table>
@@ -267,7 +247,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="left">바디</td>
+                    <td class="left">
+                      <a href="">바디</a>
+                    </td>
                     <td>2024.12.12</td>
                     <td>NTAS</td>
                     <td class="btn_area">
@@ -275,18 +257,22 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="left">바디</td>
+                    <td class="left">
+                      <a href="">바디</a>
+                    </td>
                     <td>2024.12.12</td>
                     <td>NTAS</td>
-                    <td>
+                    <td class="btn_area">
                       <button class="xs bk_outline">button</button>
                     </td>
                   </tr>
                   <tr>
-                    <td class="left">바디</td>
+                    <td class="left">
+                      <a href="">바디</a>
+                    </td>
                     <td>2024.12.12</td>
                     <td>NTAS</td>
-                    <td>
+                    <td class="btn_area">
                       <button class="xs bk_outline">button</button>
                     </td>
                   </tr>
@@ -421,7 +407,6 @@
                 <span class="hint">hint text</span>
               </summary>
               <div class="accordion_body">
-              
                 <div class="item_list">
                   <div class="item_desc">
                     <div class="subtitle02">text</div>
@@ -431,14 +416,224 @@
                     <option value="">text</option>
                   </select>
                 </div>
-              
               </div>
             </details>
           </div>
+          <!-- accordion end-->
+
+
+          <h2 style="margin-bottom: 10px; margin-top: 30px;">modal</h2>
+          <srction class="flex_lg">
+            <div class="modal" id="prompt" style="display: block;">
+              <div class="modal_head">
+                prompt
+              </div>
+              <div class="modal_body">
+                <div class="modal_desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum temporibus eligendi nulla! Eos nulla mollitia laboriosam autem eaque. Quo assumenda cupiditate id quia saepe, placeat totam suscipit temporibus laudantium libero.
+                  <textarea name="" id=""></textarea>
+                </div>
+                <div class="btn_area">
+                  <button class="bk_outline sm" id="closeModal">취소</button>
+                  <button class="bk sm" id="checkModal">확인</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="modal" id="confirm" style="display: block;">
+              <div class="modal_body">
+                <div class="modal_desc">
+                  <span class="material-symbols-outlined icon">question_mark</span>
+                  <div style="text-align: center;">
+                    <h5>confirm 확실합니까?</h5>
+                    <span class="caption">hint</span>
+                  </div>
+                </div>
+                <div class="btn_area">
+                  <button class="bk_outline sm" id="closeModal">취소</button>
+                  <button class="bk sm" id="checkModal">확인</button>
+                </div>
+              </div>
+            </div>
+          
+            <div class="modal" id="alert" style="display: block;">
+              <div class="modal_body">
+                <div class="modal_desc">
+                  <div class="flex_md">
+                    <span class="material-symbols-outlined icon">question_mark</span>
+                    <div>
+                      <div class="subtitle01">alert 저장되었습니다.</div>
+                      <span class="caption">hint</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </srction>
+
+          <h2 style="margin-bottom: 10px; margin-top: 30px;">paper</h2>
+          <section class="flex_md">
+
+            <div class="paper info_bl info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+              <div class="count_base">
+                <h3>20.1</h3>
+              </div>
+            </div>
+
+            <div class="paper info_rd info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+              <div class="count_base">
+                <h3>20.1</h3>
+              </div>
+            </div>
+
+            <div class="paper info_ye info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+              <div class="count_base">
+                <h3>20.1</h3>
+              </div>
+            </div>
+
+            <div class="paper info_gr info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+              <div class="count_base">
+                <h3>20.1</h3>
+              </div>
+            </div>
+
+            <div class="paper info_gy info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+              <div class="count_base">
+                <h3>20.1</h3>
+              </div>
+            </div>
+
+            <div class="paper info_sk info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+              <div class="count_base">
+                <h3>20.1</h3>
+              </div>
+            </div>
+
+          </section>
+          <section class="flex_md" style="margin-top: 20px;">
+
+            <div class="paper info_bl info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+            </div>
+
+            <div class="paper info_rd info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+            </div>
+
+            <div class="paper info_ye info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+            </div>
+
+            <div class="paper info_gr info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+            </div>
+
+            <div class="paper info_gy info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+            </div>
+
+            <div class="paper info_sk info">
+              <div class="felx_column_xs">
+                <span class="material-symbols-outlined icon">
+                  bar_chart
+                </span>
+                <h6>Empathize</h6>
+                <span class="count">적용 누적 0건</span>
+              </div>
+            </div>
+          </section>
+
+          <h2 style="margin-bottom: 10px; margin-top: 30px;">pagination</h2>
+          <section>
+            <ul class="pagination">
+              <li><a href="#">&laquo; Previous</a></li>
+              <li><a href="#">1</a></li>
+              <li class="active"><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">Next &raquo;</a></li>
+            </ul>
+          </section>
+
     
         </div>
+      </div>
+
       <div data-include-path="include/footer.html"></div>
-      
     </div>
   </main>
 

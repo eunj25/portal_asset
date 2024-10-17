@@ -22,12 +22,12 @@
   <!-- modal start -->
   <div class="modal position_center" id="prompt">
     <div class="modal_head">
-      title
+      반려 사유
     </div>
     <div class="modal_body">
       <div class="modal_desc">
         자동화가 불가한 사유를 입력 바랍니다.
-        <textarea name="" id=""></textarea>
+        <textarea name="" id="" placeholder="반려 사유를 입력 바랍니다."></textarea>
       </div>
       <div class="btn_area">
         <button class="bk_outline sm" id="closeModal">취소</button>
@@ -49,7 +49,7 @@
           <p id="page-hint"></p> 
         </div>
         <div class="page_btn">
-          <button class="bk_outline sm">목록</button>
+          <button class="bk_outline sm" onclick="location.href='/TaskDefine.html'">목록</button>
           <button class="bk sm">임시저장</button>
           <button class="bk sm" id="openModal">반려</button>
           <button class="bl sm">제출</button>
@@ -64,6 +64,7 @@
           <button class="tab_button" data-tab="tab2">접수의견</button>
         </div>
 
+        <!-- ========== tab1 start ========== -->
         <div class="tab_content active" id="tab1">
           <div class="accordion">
             <details open>
@@ -76,29 +77,29 @@
                 <div class="flex flex_lg">
                   <div>
                     <div class="input_wrap">
-                      <div class="item_title essential">text</div>
+                      <div class="item_title essential">업무명</div>
                       <input type="text">
                     </div>
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title essential">요청부서</div>
                       <select name="" id="">
                         <option value="">전체</option>
                         <option value="">선택</option>
                       </select>
                     </div>
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title essential">업무 수행 주기</div>
                       <select name="" id="">
                         <option value="">전체</option>
                         <option value="">선택</option>
                       </select>
                     </div>
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title">월별 작업량</div>
                       <input type="text">
                     </div>
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title essential">건당 처리 시간</div>
                       <div class="flex_sm">
                         <input type="text">시간
                         <input type="text">분
@@ -108,7 +109,7 @@
                   
                   <div>
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title">상태</div>
                       <select name="" id="">
                         <option value="">전체</option>
                         <option value="">선택</option>
@@ -116,7 +117,7 @@
                     </div>
 
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title essential">요청자</div>
                       <select name="" id="">
                         <option value="">전체</option>
                         <option value="">선택</option>
@@ -124,60 +125,74 @@
                     </div>
 
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title">업무 처리 요일</div>
                       <div class="control_wrap">
                         <div class="checkbox_wrap">
                           <input type="checkbox" id="ck01" class="screen_reader">
                           <div class="label_box">
                             <span class="check_icon" aria-hidden="true"></span>
-                            <label for="ck01">ladel</label>
+                            <label for="ck01">월요일</label>
                           </div>
                         </div>
                         <div class="checkbox_wrap">
                           <input type="checkbox"  id="ck02" class="screen_reader">
                           <div class="label_box">
                             <span class="check_icon" aria-hidden="true"></span>
-                            <label for="ck02">ladel</label>
+                            <label for="ck02">화요일</label>
                           </div>
                         </div>
                         <div class="checkbox_wrap">
                           <input type="checkbox"  id="ck3" class="screen_reader">
                           <div class="label_box">
                             <span class="check_icon" aria-hidden="true"></span>
-                            <label for="ck3">ladel</label>
+                            <label for="ck3">수요일</label>
                           </div>
                         </div>
                         <div class="checkbox_wrap">
                           <input type="checkbox"  id="ck04" class="screen_reader">
                           <div class="label_box">
                             <span class="check_icon" aria-hidden="true"></span>
-                            <label for="ck04">ladel</label>
+                            <label for="ck04">목요일</label>
                           </div>
                         </div>
                         <div class="checkbox_wrap">
                           <input type="checkbox"  id="ck05" class="screen_reader">
                           <div class="label_box">
                             <span class="check_icon" aria-hidden="true"></span>
-                            <label for="ck05">ladel</label>
+                            <label for="ck05">금요일</label>
+                          </div>
+                        </div>
+                        <div class="checkbox_wrap">
+                          <input type="checkbox"  id="ck05" class="screen_reader">
+                          <div class="label_box">
+                            <span class="check_icon" aria-hidden="true"></span>
+                            <label for="ck05">토요일</label>
+                          </div>
+                        </div>
+                        <div class="checkbox_wrap">
+                          <input type="checkbox"  id="ck05" class="screen_reader">
+                          <div class="label_box">
+                            <span class="check_icon" aria-hidden="true"></span>
+                            <label for="ck05">일요일</label>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title essential">수행인원</div>
                       <input type="text">
                     </div>
 
                     <div class="input_wrap">
-                      <div class="item_title">text</div>
+                      <div class="item_title essential">업무처리 건당 비용(원)</div>
                       <input type="text">
                     </div>
                   </div>
                 </div>
 
                 <div class="input_wrap">
-                  <div class="item_title">text</div>
+                  <div class="item_title">업무 매뉴얼</div>
                   <div class="file_wrap">
                     <input id="upload" type="file" multiple>
                     <label class="file_btn" for="upload">파일선택</label>
@@ -279,8 +294,9 @@
             </details>
           </div>
         </div>
+        <!-- ========== tab1 end ========== -->
 
-
+        <!-- ========== tab2 start ========== -->
         <div class="tab_content" id="tab2"> 
           <details open>
             <summary>
@@ -288,6 +304,46 @@
               <span class="hint">업무 처리 정보를 선택 기입하여 자동화 가능성을 확인합니다.</span>
             </summary>
             <div class="accordion_body">
+
+              <!-- paper info start -->
+              <div class="item_title bl">자동화 5순위 업무</div>
+
+              <div class="flex_md">
+                <div class="paper info_bl info">
+                  <div class="felx_column_xs">
+                    <span class="material-symbols-outlined icon">
+                      bar_chart
+                    </span>
+                    <h6>Empathize</h6>
+                  </div>
+                  <div class="count_base">
+                    <h3>20.1</h3>
+                  </div>
+                </div>
+                <div class="paper info_gr info">
+                  <div class="felx_column_xs">
+                    <span class="material-symbols-outlined icon">
+                      bar_chart
+                    </span>
+                    <h6>Empathize</h6>
+                  </div>
+                  <div class="count_base">
+                    <h3>20.1</h3>
+                  </div>
+                </div>
+                <div class="paper info_rd info">
+                  <div class="felx_column_xs">
+                    <span class="material-symbols-outlined icon">
+                      bar_chart
+                    </span>
+                    <h6>Empathize</h6>
+                  </div>
+                  <div class="count_base">
+                    <h3>20.1</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- paper info end -->
 
               <div class="input_wrap">
                 <div class="item_title">text</div>
@@ -354,7 +410,13 @@
             </summary>
             <div class="accordion_body">
 
-              <div class="subtitle02">text</div>
+              <div class="flex_sm">
+                <div class="item_title">text</div>
+                <div class="file_wrap">
+                  <div class="file_save_name">저장된 파일이름 입니다.</div>
+                  <button class="mini"><span class="material-symbols-outlined">close_small</span></button href="">
+                </div>
+              </div>
 
               <div class="input_wrap">
                 <div class="item_title">text</div>
@@ -368,8 +430,7 @@
             </div>
           </details>
         </div>
-        <!-- tab end-->
-
+        <!-- ========== tab2 end ========== -->
       </div>
 
       <div data-include-path="include/footer.html"></div>
