@@ -26,12 +26,22 @@ const pageTitles = {
   asset: 'RPA Portal design asset',
   TaskDefine: '자동화업무 제안/선정',
   TaskDefineCreate: '자동화업무 제안/선정',
-  TaskDeployConfirm: '배포실행/승인'
+  TaskDeployConfirm: '배포실행/승인',
+  TaskDevelopStatus: '과제목록',
+  // 운영관리
+  TaskOperationStatus: '운영 관리',
+  // 관리자
+  BaseInfoValue: '기타 설정',
 };
 const pageHint = {
   TaskDefine: '목록',
   TaskDefineCreate: '자동화업무 제안 작성',
-  TaskDeployConfirm: '구현 된 자동화업무 운영이관 승인'
+  TaskDeployConfirm: '구현 된 자동화업무 운영이관 승인',
+  TaskDevelopStatus: '개발중인 과제 진행 현황',
+  // 운영관리
+  TaskOperationStatus: '운영과제 관리 및 프로세스 실행',
+  // 관리자
+  BaseInfoValue: 'Portal 관리를 위한 기타 설정 관리',
 };
 
 function updateTitle(pageKey) {
