@@ -20,10 +20,10 @@
 
   <div data-include-path="include/header.html"></div>
   
+  <!-- modal start -->
   <div class="bg"></div>
 
-  <!-- modal start -->
-  <div class="modal position_center" id="prompt">
+  <div class="modal prompt position_center" id="prompt">
     <div class="modal_head">
       title
     </div>
@@ -85,7 +85,7 @@
                   <div class="item_title">text</div>
                   <input type="date" name="" id="">
 
-                  <div class="flex_sm">
+                  <div class="flex_sm_center">
                     <input type="date" name="" id=""> ~ 
                     <input type="date" name="" id="">
                   </div>
@@ -114,36 +114,38 @@
           </div>
 
           <h2 style="margin-bottom: 10px;">checkbox</h2>
-          <div class="control_wrap">
-            <div class="checkbox_wrap">
-              <input type="checkbox" id="a" class="screen_reader">
-              <div class="label_box">
-                <span class="check_icon" aria-hidden="true"></span>
-                <label for="a">체크되어 있지 않은 체크박스</label>
+          <section>
+            <div class="control_wrap">
+              <div class="checkbox_wrap">
+                <input type="checkbox" id="a" class="screen_reader">
+                <div class="label_box">
+                  <span class="check_icon" aria-hidden="true"></span>
+                  <label for="a">체크되어 있지 않은 체크박스</label>
+                </div>
+              </div>
+              <div class="checkbox_wrap">
+                <input type="checkbox" checked id="b" class="screen_reader">
+                <div class="label_box">
+                  <span class="check_icon" aria-hidden="true"></span>
+                  <label for="b">체크되어 있는 체크박스</label>
+                </div>
+              </div>
+              <div class="checkbox_wrap">
+                <input type="checkbox" disabled id="c" class="screen_reader" >
+                <div class="label_box">
+                  <span class="check_icon" aria-hidden="true"></span>
+                  <label for="c">체크되어 있지 않은 disabled 체크박스</label>
+                </div>
+              </div>
+              <div class="checkbox_wrap">
+                <input type="checkbox" disabled checked id="d" class="screen_reader" >
+                <div class="label_box">
+                  <span class="check_icon" aria-hidden="true"></span>
+                  <label for="d">체크되어 있는 disabled 체크박스</label>
+                </div>
               </div>
             </div>
-            <div class="checkbox_wrap">
-              <input type="checkbox" checked id="b" class="screen_reader">
-              <div class="label_box">
-                <span class="check_icon" aria-hidden="true"></span>
-                <label for="b">체크되어 있는 체크박스</label>
-              </div>
-            </div>
-            <div class="checkbox_wrap">
-              <input type="checkbox" disabled id="c" class="screen_reader" >
-              <div class="label_box">
-                <span class="check_icon" aria-hidden="true"></span>
-                <label for="c">체크되어 있지 않은 disabled 체크박스</label>
-              </div>
-            </div>
-            <div class="checkbox_wrap">
-              <input type="checkbox" disabled checked id="d" class="screen_reader" >
-              <div class="label_box">
-                <span class="check_icon" aria-hidden="true"></span>
-                <label for="d">체크되어 있는 disabled 체크박스</label>
-              </div>
-            </div>
-          </div>
+          </section>
 
           <h2 style="margin-bottom: 10px; margin-top: 30px;">search</h2>
           <!-- search_box start -->
@@ -285,7 +287,7 @@
           </div>
   
           <h2 style="margin-bottom: 10px; margin-top: 30px;">button</h2>
-          <div style="display: flex; flex-direction: column; gap: 20px;">
+          <section style="display: flex; flex-direction: column; gap: 20px;">
             <!-- button start-->
             <div class="btn_box">
               <button class="md bk_outline">outline</button>
@@ -320,34 +322,18 @@
               <button class="xs rd">filled</button>
             </div>
             <!-- button end-->
-          </div>
+          </section>
 
           <h2 style="margin-bottom: 10px; margin-top: 30px;">tab Menu / card</h2>
           <!-- tab start-->
-          <div class="tab_menu">
-            <button class="tab_button active" data-tab="tab1">Tab 1 _card</button>
-            <button class="tab_button" data-tab="tab2">Tab 2 _card 3nd</button>
-            <button class="tab_button" data-tab="tab3">Tab 3</button>
-          </div>
-
-          <div class="tab_content active" id="tab1">
-            <!-- card start -->
-            <div class="card">
-              <div class="card_head">
-                <div class="subtitle02">card title</div>
-                <span class="caption">hint text</span>
-                <span class="material-symbols-outlined icon">
-                  arrow_right_alt
-                </span>
-              </div>
-              <div class="card_body">
-                card
-              </div>
+          <section>
+            <div class="tab_menu">
+              <button class="tab_button active" data-tab="tab1">Tab 1 _card</button>
+              <button class="tab_button" data-tab="tab2">Tab 2 _card 3nd</button>
+              <button class="tab_button" data-tab="tab3">Tab 3</button>
             </div>
-            <!-- card end -->
-          </div>
-          <div class="tab_content" id="tab2"> 
-            <div class="card_wrap">
+  
+            <div class="tab_content active" id="tab1">
               <!-- card start -->
               <div class="card">
                 <div class="card_head">
@@ -362,41 +348,59 @@
                 </div>
               </div>
               <!-- card end -->
-              <!-- card start -->
-              <div class="card">
-                <div class="card_head">
-                  <div class="subtitle02">card title</div>
-                  <span class="caption">hint text</span>
-                  <span class="material-symbols-outlined icon">
-                    arrow_right_alt
-                  </span>
-                </div>
-                <div class="card_body">
-                  card
-                </div>
-              </div>
-              <!-- card end -->
-               <!-- card start -->
-              <div class="card">
-                <div class="card_head">
-                  <div class="subtitle02">card title</div>
-                  <span class="caption">hint text</span>
-                  <span class="material-symbols-outlined icon">
-                    arrow_right_alt
-                  </span>
-                </div>
-                <div class="card_body">
-                  card
-                </div>
-              </div>
-              <!-- card end -->
             </div>
-          </div>
-          <div class="tab_content" id="tab3">
-            <div class="paper">
-              item content
+            <div class="tab_content" id="tab2"> 
+              <div class="card_wrap">
+                <!-- card start -->
+                <div class="card">
+                  <div class="card_head">
+                    <div class="subtitle02">card title</div>
+                    <span class="caption">hint text</span>
+                    <span class="material-symbols-outlined icon">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                  <div class="card_body">
+                    card
+                  </div>
+                </div>
+                <!-- card end -->
+                <!-- card start -->
+                <div class="card">
+                  <div class="card_head">
+                    <div class="subtitle02">card title</div>
+                    <span class="caption">hint text</span>
+                    <span class="material-symbols-outlined icon">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                  <div class="card_body">
+                    card
+                  </div>
+                </div>
+                <!-- card end -->
+                 <!-- card start -->
+                <div class="card">
+                  <div class="card_head">
+                    <div class="subtitle02">card title</div>
+                    <span class="caption">hint text</span>
+                    <span class="material-symbols-outlined icon">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                  <div class="card_body">
+                    card
+                  </div>
+                </div>
+                <!-- card end -->
+              </div>
             </div>
-          </div>
+            <div class="tab_content" id="tab3">
+              <div class="paper">
+                item content
+              </div>
+            </div>
+          </section>
           <!-- tab end-->
 
 
@@ -420,13 +424,77 @@
                 </div>
               </div>
             </details>
+
+            <details open>
+              <summary>
+                title
+                <span class="hint">hint text</span>
+              </summary>
+              <div class="accordion_body">
+            
+                <div class="table_box">    
+                  <!-- table_wrap start -->
+                  <div class="table_wrap border">
+                    <table>
+                      <colgroup>
+                        <col style="width: 60%;">
+                        <col >
+                        <col >
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>제목</th>
+                          <th>작성일</th>
+                          <th>작성자</th>
+                          <th>버튼</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="left">
+                            <a href="">바디</a>
+                          </td>
+                          <td>2024.12.12</td>
+                          <td>NTAS</td>
+                          <td class="btn_area">
+                            <button class="xs bk_outline">button</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="left">
+                            <a href="">바디</a>
+                          </td>
+                          <td>2024.12.12</td>
+                          <td>NTAS</td>
+                          <td class="btn_area">
+                            <button class="xs bk_outline">button</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="left">
+                            <a href="">바디</a>
+                          </td>
+                          <td>2024.12.12</td>
+                          <td>NTAS</td>
+                          <td class="btn_area">
+                            <button class="xs bk_outline">button</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- table_wrap end-->
+                </div>
+
+              </div>
+            </details>
           </div>
           <!-- accordion end-->
 
 
           <h2 style="margin-bottom: 10px; margin-top: 30px;">modal</h2>
           <srction class="flex_lg">
-            <div class="modal" id="prompt" style="display: block;">
+            <div class="modal prompt" style="display: block;">
               <div class="modal_head">
                 prompt
               </div>
@@ -442,7 +510,7 @@
               </div>
             </div>
   
-            <div class="modal" id="confirm" style="display: block;">
+            <div class="modal confirm" style="display: block;">
               <div class="modal_body">
                 <div class="modal_desc">
                   <span class="material-symbols-outlined icon">question_mark</span>
@@ -458,7 +526,7 @@
               </div>
             </div>
           
-            <div class="modal" id="alert" style="display: block;">
+            <div class="modal alert" style="display: block;">
               <div class="modal_body">
                 <div class="modal_desc">
                   <div class="flex_md">

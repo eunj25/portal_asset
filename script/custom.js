@@ -28,6 +28,7 @@ const pageTitles = {
   TaskDefineCreate: '자동화업무 제안/선정',
   TaskDeployConfirm: '배포실행/승인',
   TaskDevelopStatus: '과제목록',
+  TaskDevelopDetails: '과제상세',
   // 운영관리
   TaskOperationStatus: '운영 관리',
   // 관리자
@@ -38,6 +39,7 @@ const pageHint = {
   TaskDefineCreate: '자동화업무 제안 작성',
   TaskDeployConfirm: '구현 된 자동화업무 운영이관 승인',
   TaskDevelopStatus: '개발중인 과제 진행 현황',
+  TaskDevelopDetails: '개발중인 과제 현황 상세',
   // 운영관리
   TaskOperationStatus: '운영과제 관리 및 프로세스 실행',
   // 관리자
@@ -87,6 +89,7 @@ $(document).ready(function() {
     $('.bg').fadeOut(200);
     $('#prompt').fadeOut(200);
   });
+
   $('#prompt #checkModal').on('click', function() {
     $('.bg').fadeOut(200);
     $('#prompt').fadeOut(200);

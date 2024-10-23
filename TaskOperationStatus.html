@@ -20,6 +20,48 @@
 <body>
 
   <div data-include-path="include/header.html"></div>
+
+  <!-- modal start -->
+  <div class="bg"></div>
+  <!-- 프로세스 즉시 실행 -->
+  <div class="modal prompt position_center" id="play">
+    <div class="modal_head">
+      프로세스 즉시 실행
+    </div>
+    <div class="modal_body">
+      <div class="modal_desc">
+        <div class="item_title">대상 프로세스: 법인 카드 사용 내역 조사</div> 
+        <div class="item_title">수행 Bot 선택</div>
+        <select name="" id="">
+          <option value="">bot1</option>
+          <option value="">bot2</option>
+          <option value="">bot3</option>
+        </select>
+      </div>
+      <div class="btn_area">
+        <button class="bk_outline sm" id="closeModal">닫기</button>
+        <button class="bk sm" id="checkModal">실행</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 프로세스 즉시 중지 -->
+  <div class="modal confirm position_center" id="stop">
+    <div class="modal_body">
+      <div class="modal_desc">
+          <span class="material-symbols-outlined icon">question_mark</span>
+          <div style="text-align: center;">
+            <h5>해당 프로세스를 중단 하시겠습니까?</h5>
+            <span class="caption"><div class="item_title">대상 프로세스: 법인 카드 사용 내역 조사</div> </span>
+          </div>
+      </div>
+      <div class="btn_area">
+        <button class="bk_outline sm" id="closeModal">닫기</button>
+        <button class="bk sm" id="checkModal">실행</button>
+      </div>
+    </div>
+  </div>
+  <!-- modal end -->
   
   <main>
     <div data-include-path="include/menu.html"></div> 
@@ -64,50 +106,128 @@
             <div class="table_wrap">
               <table>
                 <colgroup>
-                  <col style="width: 60%;">
-                  <col >
-                  <col >
+                  <col />
+                  <col />
+                  <col />
+                  <col width= "30%;">
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>제목</th>
-                    <th>작성일</th>
-                    <th>작성자</th>
-                    <th>버튼</th>
+                    <th>번호</th>
+                    <th>상태</th>
+                    <th>부서</th>
+                    <th>업무명</th>
+                    <th>담당자</th>
+                    <th>연간작업시간</th>
+                    <th>가능성</th>
+                    <th>리스크</th>
+                    <th>시작/종료시간</th>
+                    <th>난이도</th>
+                    <th>과제상태</th>
+                    <th>과제 즉시실행</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td>1</td>
+                    <td>개발중</td>
+                    <td>RPA사업팀</td>
                     <td class="left">
-                      <a href="">바디</a>
+                      <a href="">업무명입니다.</a>
                     </td>
-                    <td>2024.12.12</td>
                     <td>NTAS</td>
+                    <td>NTAS</td>
+                    <td>21</td>
+                    <td>4.1</td>
+                    <td>4.1</td>
+                    <td>1</td>
+                    <td>대기</td>
                     <td class="btn_area">
-                      <button class="xs bl">실행</button>
-                      <button class="xs rd">중지</button>
+                      <button class="xs bl" id="playModal">실행</button>
+                      <button class="xs rd" id="stopModal">중지</button>
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
+                    <td>개발중</td>
+                    <td>RPA사업팀</td>
                     <td class="left">
-                      <a href="">바디</a>
+                      <a href="">업무명입니다.</a>
                     </td>
-                    <td>2024.12.12</td>
                     <td>NTAS</td>
+                    <td>NTAS</td>
+                    <td>21</td>
+                    <td>4.1</td>
+                    <td>4.1</td>
+                    <td>1</td>
+                    <td>대기</td>
                     <td class="btn_area">
-                      <button class="xs bl">실행</button>
-                      <button class="xs rd">중지</button>
+                      <button class="xs bl" id="playModal">실행</button>
+                      <button class="xs rd" id="stopModal">중지</button>
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
+                    <td>개발중</td>
+                    <td>RPA사업팀</td>
                     <td class="left">
-                      <a href="">바디</a>
+                      <a href="">업무명입니다.</a>
                     </td>
-                    <td>2024.12.12</td>
                     <td>NTAS</td>
+                    <td>NTAS</td>
+                    <td>21</td>
+                    <td>4.1</td>
+                    <td>4.1</td>
+                    <td>1</td>
+                    <td>대기</td>
                     <td class="btn_area">
-                      <button class="xs bl">중지</button>
-                      <button class="xs rd">중지</button>
+                      <button class="xs bl" id="playModal">실행</button>
+                      <button class="xs rd" id="stopModal">중지</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>개발중</td>
+                    <td>RPA사업팀</td>
+                    <td class="left">
+                      <a href="">업무명입니다.</a>
+                    </td>
+                    <td>NTAS</td>
+                    <td>NTAS</td>
+                    <td>21</td>
+                    <td>4.1</td>
+                    <td>4.1</td>
+                    <td>1</td>
+                    <td>대기</td>
+                    <td class="btn_area">
+                      <button class="xs bl" id="playModal">실행</button>
+                      <button class="xs rd" id="stopModal">중지</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>개발중</td>
+                    <td>RPA사업팀</td>
+                    <td class="left">
+                      <a href="">업무명입니다.</a>
+                    </td>
+                    <td>NTAS</td>
+                    <td>NTAS</td>
+                    <td>21</td>
+                    <td>4.1</td>
+                    <td>4.1</td>
+                    <td>1</td>
+                    <td>대기</td>
+                    <td class="btn_area">
+                      <button class="xs bl" id="playModal">실행</button>
+                      <button class="xs rd" id="stopModal">중지</button>
                     </td>
                   </tr>
                 </tbody>
@@ -126,6 +246,30 @@
 
   <script>
     updateTitle('TaskOperationStatus'); 
+
+    // modal
+    $(document).ready(function() {
+      // 과제 즉시 실행 
+      $('#playModal').on('click', function() {
+        $('.bg').fadeIn(200);
+        $('#play').fadeIn(200);
+      });
+      $('#play #closeModal, .bg').on('click', function() {
+        $('.bg').fadeOut(200);
+        $('#play').fadeOut(200);
+      });
+  
+      // 과제 즉시 중지
+      $('#stopModal').on('click', function() {
+        $('.bg').fadeIn(200);
+        $('#stop').fadeIn(200);
+      });
+      $('#stop #closeModal, .bg').on('click', function() {
+        $('.bg').fadeOut(200);
+        $('#stop').fadeOut(200);
+      });
+    });
+
 
   </script>
 
