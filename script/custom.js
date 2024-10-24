@@ -31,8 +31,19 @@ const pageTitles = {
   TaskDevelopDetails: '과제상세',
   // 운영관리
   TaskOperationStatus: '운영 관리',
+  // 리포트/통계
+  TaskKPIs: 'KPIs',
   // 관리자
   BaseInfoValue: '기타 설정',
+  // 헬프
+  errorreport: '장애발생 신고/처리현황',
+  errorreportCreate: '장애발생 신고/처리현황',
+  notice: '공지사항',
+  noticeCreate: '공지사항',
+  noticeDetails: '공지사항',
+  QNA: '문의하기',
+  QNACreate: '문의하기',
+  qnaDetails: '문의하기',
 };
 const pageHint = {
   TaskDefine: '목록',
@@ -42,8 +53,21 @@ const pageHint = {
   TaskDevelopDetails: '개발중인 과제 현황 상세',
   // 운영관리
   TaskOperationStatus: '운영과제 관리 및 프로세스 실행',
+  // 리포트/통계
+  TaskKPIs: 'RPA KPI 리포트',
   // 관리자
   BaseInfoValue: 'Portal 관리를 위한 기타 설정 관리',
+  // 헬프
+  errorreport: '목록',
+  errorreportCreate: '작성',
+
+  notice: '목록',
+  noticeCreate: '작성',
+  noticeDetails: '상세',
+  
+  QNA: '목록',
+  QNACreate: '작성',
+  qnaDetails: '상세',
 };
 
 function updateTitle(pageKey) {
@@ -95,4 +119,12 @@ $(document).ready(function() {
     $('#prompt').fadeOut(200);
   });
   
+});
+
+const toggleList = document.querySelectorAll(".toggleSwitch");
+
+toggleList.forEach(($toggle) => {
+  $toggle.onclick = () => {
+    $toggle.classList.toggle('active');
+  }
 });

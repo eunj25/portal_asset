@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문의하기</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <!-- jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script  src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- google font-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- custom CSS & JS-->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <script src="/script/cart.js"></script>
+  <script src="/script/custom.js"></script>
+</head>
+<body>
+
+  <div data-include-path="/include/header.html"></div>
+  
+  <main>
+    <div data-include-path="/include/menu.html"></div> 
+
+    <div class="container">
+      <!-- pageHeader start -->
+      <div class="page_header">
+        <div class="title_box">
+          <h6 id="page-title"></h6>
+          <p id="page-hint"></p>
+        </div>
+        <div class="page_btn">
+          <button class="bk_outline sm" onclick="location.href='/board/qna.html'">목록</button>
+        </div>
+      </div>
+      <!-- pageHeader end -->
+
+      <div class="container_inner board">
+
+        <section class="paper">
+          <div class="flex_between">
+            <div class="subtitle01">문의하기 제목입니다.</div>
+            <div class="btn_area">
+              <button class="rd_outline xs">삭제</button>
+              <button class="bk xs">수정</button>
+            </div>
+          </div>
+          <div class="flex_lg" style="justify-content: space-between;">
+            <div class="caption">
+              첨부파일 
+              <span><a download href="/images/logo.svg">첨부파일명 입니다.</a></span>
+            </div>
+            
+            <div class="caption ">
+              <span class="flex_sm_center">
+                <span class="material-symbols-outlined icon">visibility</span>20
+                <span class="material-symbols-outlined icon">event</span>2022.02.25 20:36:40
+                <span class="material-symbols-outlined icon">person</span>Jack Lee</span>
+              </span>
+            </div>
+          </div>
+          
+          <div class="textBox">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis est facere, deserunt veritatis ex tempora sed quia voluptates atque adipisci repellat exercitationem minus harum corrupti? Id error impedit repellat blanditiis.
+            </p>
+          </div>
+        </section>
+
+        <section class="paper">
+          <div class="comment_box">
+            <div class="profile_box">
+              <div class="photo">
+                <img src="/images/profile.svg" alt="">
+              </div>
+            </div>
+            <div class="messege_box">
+              <div class="caption">개발자</div>
+              <div class="messege">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem soluta illo ea error fugiat distinctio pariatur? Mollitia unde sed, fugit ducimus architecto eius nam, iste facere itaque vitae laborum.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem soluta illo ea error fugiat distinctio pariatur? Mollitia unde sed, fugit ducimus architecto eius nam, iste facere itaque vitae laborum.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem soluta illo ea error fugiat distinctio pariatur? Mollitia unde sed, fugit ducimus architecto eius nam, iste facere itaque vitae laborum.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem soluta illo ea error fugiat distinctio pariatur? Mollitia unde sed, fugit ducimus architecto eius nam, iste facere itaque vitae laborum.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem soluta illo ea error fugiat distinctio pariatur? Mollitia unde sed, fugit ducimus architecto eius nam, iste facere itaque vitae laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment_box myself">
+            <div class="profile_box">
+              <div class="photo">
+                <img src="/images/profile.svg" alt="">
+              </div>
+            </div>
+            <div class="messege_box">
+              <div class="caption">개발자(나)</div>
+              <div class="messege">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem soluta illo ea error fugiat distinctio pariatur? Mollitia unde sed, fugit ducimus architecto eius nam, iste facere itaque vitae laborum.
+                </p>
+                <div class="flex_sm_center">
+                  <span class="caption">2022.02.25 20:36:40</span>
+                  <button class="rd_outline xs">
+                    <span class="material-symbols-outlined icon">close</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex_md">
+            <div class="item_title">답변</div>
+            <input type="text" placeholder="Comments...">
+            <button class="bk sm">등록</button>
+          </div>
+        </section>
+     
+      </div>
+
+      <div data-include-path="/include/footer.html"></div>
+
+    </div>
+  </main>
+
+  <script>
+    updateTitle('qnaDetails'); 
+
+  </script>
+
+</body>
+</html>

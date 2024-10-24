@@ -161,6 +161,46 @@ button.mini:hover {
   gap: var(--space-8);
 }
 
+ /* toggle button */
+.toggleSwitch {
+  width: 40px;
+  height: 20px;
+  display: block;
+  position: relative;
+  border-radius: 30px;
+  background-color: #fff;
+  border: var(--border);
+  cursor: pointer;
+}
+.toggleSwitch .toggleButton {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--secondary50);
+}
+#toggle:checked ~ .toggleSwitch {
+  background: var(--secondary50);
+}
+#toggle:checked ~ .toggleSwitch .toggleButton {
+  left: calc(100% - 16px);
+  background: #fff;
+}
+.toggleSwitch, .toggleButton {
+  transition: all 0.2s ease-in;
+}
+.toggleSwitch.active {
+  background: var(--secondary50);
+}
+.toggleSwitch.active .toggleButton {
+  left: calc(100% - 44px);
+  background: #fff;
+}
+
+
 /* border */
 :root {
   --border: 1px solid var(--gray40);
@@ -254,8 +294,8 @@ input,
 select {
   height: 37px;
 }
-input,
 select,
+input,
 textarea {
   width: 100%;
   border: var(--border);
@@ -459,6 +499,17 @@ textarea:disabled {
   gap: var(--space-12);
   width: 100%;
 }
+.flex_sm {
+  display: flex;
+  align-items: start;
+  gap: var(--space-8);
+  width: 100%;
+}
+.flex_xs {
+  display: flex;
+  align-items: start;
+  width: 100%;
+}
 .flex_sm_center {
   display: flex;
   align-items: center;
@@ -535,6 +586,9 @@ h6 {
   font-size: var(--h6);
   font-weight: 500;
 }
+a, p {
+  text-wrap: balance;
+}
 .subtitle01 {
   font-size: var(--subtitle01);
   font-style: normal;
@@ -574,10 +628,10 @@ header {
   align-items: center;
 }
 
-header .profile-box {
+header .profile_box {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-12);
 }
 
 .logo {
@@ -636,6 +690,10 @@ nav .sub_menu a:hover {
   display: flex;
   align-items: center;
   gap: var(--space-10);
+}
+.page_btn {
+  display: flex;
+  gap: var(--space-4);
 }
 
 .container_inner {
@@ -733,25 +791,15 @@ nav .sub_menu a:hover {
   margin-bottom: var(--space-8);
 }
 .table_top_wrap .count_info {
-  display: flex;
-  align-items: center;
   gap: var(--space-8);
-}
-.table_top_wrap .count_base {
-  display: flex;
-  align-items: center;
-}
-.table_top_wrap .count_base span {
-  color: var(--gray70);
-  font-size: var(--caption);
-  padding-left: var(--space-4);
 }
 
 .table_wrap {
   border-radius: var(--border-radius);
   border: var(--border);
   width: 100%;
-  max-height: 520px;
+  /* min-height: 520px; */
+  max-height: 690px;
   overflow-y: scroll;
 }
 .table_wrap table {
@@ -785,7 +833,12 @@ table .btn_area {
   background-color: var(--wh);
   border-bottom: var(--border);
   text-align: center;
-
+}
+.table_wrap table tbody td a { 
+  height: 17px;
+  max-width: 700px;
+  display: inline-block;
+  
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -795,11 +848,13 @@ table .btn_area {
 }
 .table_wrap table tbody td.left { 
   text-align: left;
-  color: var(--secondary50);
   box-sizing: border-box;
 }
-
+.table_wrap table tbody td a { 
+  color: var(--secondary50);
+}
 .table_wrap table tbody td a:hover { 
+  color: var(--secondary50);
   text-decoration: underline;
 }
 .table_wrap.border table thead th {
@@ -810,6 +865,38 @@ table .btn_area {
 }
 .table_wrap.border table tbody td {
   border:none;
+}
+
+/* count_info */
+.count_info {
+  display: flex;
+  align-items: center;
+}
+.count_base {
+  display: flex;
+  align-items: center;
+}
+.count_base span {
+  color: var(--gray70);
+  font-size: var(--caption);
+  padding-left: var(--space-4);
+}
+.count_info_list {
+  width: 100%;
+  border-right: var(--border);
+}
+.count_info_list:last-child {
+  border-right: none;
+}
+.count_info_list .count_info {
+  padding: var(--list-padding-md); 
+  font-size: var(--body01);
+  font-weight: bold;
+  justify-content: space-between;
+}
+.count_info_list .count_base {
+  align-items: flex-end;
+  font-weight: normal;
 }
 
 /* tab_menu */
