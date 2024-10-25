@@ -29,13 +29,19 @@ const pageTitles = {
   TaskDeployConfirm: '배포실행/승인',
   TaskDevelopStatus: '과제목록',
   TaskDevelopDetails: '과제상세',
+
   // 운영관리
   TaskOperationStatus: '운영 관리',
+
   // 리포트/통계
   TaskKPIs: 'KPIs',
+  TaskDailyExeReport: '수행 리포트',
+
   // 관리자
   BaseInfoValue: '기타 설정',
+  Members: '사용자 관리',
   MenuAccessLevel: '메뉴권한 설정',
+
   // 헬프
   errorreport: '장애발생 신고/처리현황',
   errorreportCreate: '장애발생 신고/처리현황',
@@ -52,21 +58,25 @@ const pageHint = {
   TaskDeployConfirm: '구현 된 자동화업무 운영이관 승인',
   TaskDevelopStatus: '개발중인 과제 진행 현황',
   TaskDevelopDetails: '개발중인 과제 현황 상세',
+
   // 운영관리
   TaskOperationStatus: '운영과제 관리 및 프로세스 실행',
+
   // 리포트/통계
   TaskKPIs: 'RPA KPI 리포트',
+  TaskDailyExeReport: '최근 7일이내 시나리오 수행 상태 리포트',
+
   // 관리자
   BaseInfoValue: 'Portal 관리를 위한 기타 설정 관리',
+  Members: '목록',
   MenuAccessLevel: '상세',
+
   // 헬프
   errorreport: '목록',
   errorreportCreate: '작성',
-
   notice: '목록',
   noticeCreate: '작성',
   noticeDetails: '상세',
-  
   QNA: '목록',
   QNACreate: '작성',
   qnaDetails: '상세',
