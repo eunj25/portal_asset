@@ -31,87 +31,379 @@
           <h6 id="page-title"></h6>
           <p id="page-hint"></p>
         </div>
-        <div class="page_btn">
-          <button class="bk sm">수정</button>
-        </div>
       </div>
       <!-- pageHeader end -->
 
       <div class="container_inner">  
 
-        <div class="flex_md">
+        <section class="flex_md" style="align-items: stretch;">
+          <!-- SMTP start -->
           <div class="paper">
-            <h6>Smap</h6>
+            <div class="flex_sm_center">
+              <h6>SMTP</h6>
+              <span class="caption">사내 SMTP 서비스가 있을 경우</span>
+            </div>
+
+            <div class="list_box">
+              <table>
+                <colgroup>
+                  <col >
+                  <col style="width: 80%;">
+                </colgroup>
+                <tr>
+                  <th>서버명</th>
+                  <td>
+                    <input type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <th>Port</th>
+                  <td>
+                    <input type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <th>ID</th>
+                  <td>
+                    <input type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <th>PW(secure)</th>
+                  <td>
+                    <input type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="flex_sm_center" style="justify-content: end;">
+                      <div class="checkbox_wrap">
+                        <input type="checkbox" id="a" class="screen_reader">
+                        <div class="label_box">
+                          <span class="check_icon" aria-hidden="true"></span>
+                          <label for="a">보안연결(SSL) 필요</label>
+                        </div>
+                      </div>
+                      <button class="bl xs">저장</button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+
           </div>
+          <!-- SMTP end -->
+
+
+          <!-- 부서관리 start -->
           <div class="paper">
-            <h6>부서관리</h6>
+            <div class="flex_sm_center">
+              <h6>부서관리</h6>
+              <span class="caption">사내 SMTP 서비스가 있을 경우</span>
+            </div>
+
+            <div class="list_box">
+              <table>
+                <colgroup>
+                  <col >
+                  <col style="width: 60%;">
+                  <col >
+                </colgroup>
+                <tr>
+                  <th>등록할 부서명</th>
+                  <td>
+                    <input type="text">
+                  </td>
+                  <td>
+                    <button class="bk sm">추가</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div style="margin: 0 var(--space-10);">
+              <div class="flex_between">
+                <div class="item_title">등록된 부서명</div>
+                <div>
+                  <button class="rd_outline xs">삭제</button>
+                  <button class="bl xs">저장</button>
+                </div>
+              </div>
+  
+              <div class="table_box">  
+                <!-- table_wrap start -->
+                <div class="table_wrap border">
+                  <table>
+                    <colgroup>
+                      <col >
+                      <col style="width: 90%;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th colspan='2'>부서명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="checkbox_wrap">
+                            <input type="checkbox" checked id="ck01" class="screen_reader" >
+                            <div class="label_box">
+                              <span class="check_icon" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><label for="ck01">부서명입니다.</label></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox_wrap">
+                            <input type="checkbox" checked id="ck02" class="screen_reader" >
+                            <div class="label_box">
+                              <span class="check_icon" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><label for="ck02">부서명입니다.</label></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox_wrap">
+                            <input type="checkbox" checked id="ck03" class="screen_reader" >
+                            <div class="label_box">
+                              <span class="check_icon" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><label for="ck03">부서명입니다.</label></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox_wrap">
+                            <input type="checkbox" checked id="ck04" class="screen_reader" >
+                            <div class="label_box">
+                              <span class="check_icon" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><label for="ck04">부서명입니다.</label></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox_wrap">
+                            <input type="checkbox" checked id="ck05" class="screen_reader" >
+                            <div class="label_box">
+                              <span class="check_icon" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><label for="ck05">부서명입니다.</label></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox_wrap">
+                            <input type="checkbox" checked id="ck06" class="screen_reader" >
+                            <div class="label_box">
+                              <span class="check_icon" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><label for="ck06">부서명입니다.</label></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- table_wrap end-->
+              </div>
+            </div>
+
           </div>
-        </div>
+          <!-- 부서관리 end -->
+
+        </section>
 
         <!-- accordion start-->
-        <div class="accordion">
+        <section class="accordion">
           <details open>
             <summary>
-              title
-              <span class="hint">hint text</span>
+              Tenant 별 API Token Key Value 관리
             </summary>
             <div class="accordion_body">
-              <div class="item_list">
-                <div class="item_desc">
-                  <div class="subtitle02">text</div>
-                  <span class="caption">text</span>
+              <div class="table_box">
+                <!-- table_top_wrap start -->
+                <div class="table_top_wrap">
+                  <div class="searchbar_wrap"></div>
+                  <div class="aera">
+                    <button class="rd_outline xs">삭제</button>
+                    <button class="bk_outline xs">추가</button>
+                    <button class="bl xs">저장</button>
+                  </div>
                 </div>
-                <select name="" id="">
-                  <option value="">text</option>
-                </select>
+                <!-- table_top_wrap end -->
+    
+                <!-- table_wrap start -->
+                <div class="table_wrap border">
+                  <table>
+                    <colgroup>
+                      <col >
+                      <col >
+                      <col style="width: 60%;">
+                      <col >
+                      <col >
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Tenant Name</th>
+                        <th>API Token Key Value</th>
+                        <th>사용기한</th>
+                        <th>Remark</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>NTAS</td>
+                        <td>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fugiat ipsa quisquam enim tenetur vero, modi nihil culpa cumque quaerat doloremque ipsam maiores! Ipsum placeat, harum eos numquam ullam amet.
+                          </p>
+                        </td>
+                        <td>2024.12.12</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>NTAS</td>
+                        <td>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fugiat ipsa quisquam enim tenetur vero, modi nihil culpa cumque quaerat doloremque ipsam maiores! Ipsum placeat, harum eos numquam ullam amet.
+                          </p>
+                        </td>
+                        <td>2024.12.12</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- table_wrap end-->
               </div>
             </div>
           </details>
-        </div>
+        </section>
         <!-- accordion end-->
 
         <!-- accordion start-->
-        <div class="accordion">
+        <section class="accordion">
           <details open>
             <summary>
-              title
-              <span class="hint">hint text</span>
+              KPI's 기준 설정
+              <span class="hint">RPA성과 측정을 위한 KPI's 기준 값 설정</span>
             </summary>
             <div class="accordion_body">
-              <div class="item_list">
-                <div class="item_desc">
-                  <div class="subtitle02">text</div>
-                  <span class="caption">text</span>
+
+              <div class="flex_lg" >
+                <div class="count_info_list" style="flex: 1;">
+                  <div class="count_info">
+                    자동화 가능 1순위 기준점
+                    <div class="count_base">
+                      <h3>0</h3>
+                    </div>
+                  </div>
+                  <div class="count_info">
+                    자동화 가능 2순위 기준점
+                    <div class="count_base">
+                      <h3>0</h3>
+                    </div>
+                  </div>
+                  <div class="count_info">
+                    년간 업무량 1순위 기준점(시간)
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>시간</span>
+                    </div>
+                  </div>
+                  <div class="count_info">
+                    년간 업무량 2순위 기준점(시간)
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>시간</span>
+                    </div>
+                  </div>
                 </div>
-                <select name="" id="">
-                  <option value="">text</option>
-                </select>
+
+                <div style="flex: 2;">
+                  <img src="/images/sample.png" alt="">
+                </div>
               </div>
+
             </div>
           </details>
-        </div>
+        </section>
         <!-- accordion end-->
 
         <!-- accordion start-->
-        <div class="accordion">
+        <section class="accordion">
           <details open>
             <summary>
-              title
-              <span class="hint">hint text</span>
+              개발 KPI's
             </summary>
             <div class="accordion_body">
-              <div class="item_list">
-                <div class="item_desc">
-                  <div class="subtitle02">text</div>
-                  <span class="caption">text</span>
+
+              <div class="flex_xs">
+                <div class="count_info_list">
+                  <div class="count_info">
+                    개발 준수율 목표(%) 
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="count_info">
+                    자체 개선율 목표(%) 
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="count_info">
+                    Bot 일 가동률 기준시간 
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>시간</span>
+                    </div>
+                  </div>
                 </div>
-                <select name="" id="">
-                  <option value="">text</option>
-                </select>
+
+                <div class="count_info_list">
+                  <div class="count_info">
+                    장애 처리율 목표(%) 
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="count_info">
+                    사용자 만족도 목표(%) 
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="count_info">
+                    Bot 월 가동 기준 영업일 
+                    <div class="count_base">
+                      <h3>0</h3>
+                      <span>일</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+
             </div>
           </details>
-        </div>
+        </section>
         <!-- accordion end-->
 
 

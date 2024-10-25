@@ -35,6 +35,7 @@ const pageTitles = {
   TaskKPIs: 'KPIs',
   // 관리자
   BaseInfoValue: '기타 설정',
+  MenuAccessLevel: '메뉴권한 설정',
   // 헬프
   errorreport: '장애발생 신고/처리현황',
   errorreportCreate: '장애발생 신고/처리현황',
@@ -57,6 +58,7 @@ const pageHint = {
   TaskKPIs: 'RPA KPI 리포트',
   // 관리자
   BaseInfoValue: 'Portal 관리를 위한 기타 설정 관리',
+  MenuAccessLevel: '상세',
   // 헬프
   errorreport: '목록',
   errorreportCreate: '작성',

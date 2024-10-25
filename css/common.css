@@ -420,19 +420,23 @@ textarea:disabled {
   width: 100%;
   gap: var(--space-8);
 }
-
+.list_box {
+  margin: var(--space-24) 0;
+}
 .search_box {
   border: var(--border);
   border-radius: var(--border-radius);
   background-color: var(--wh);
   padding: var(--search-padding);
 }
-.search_box table th {
+.search_box table th,
+.list_box table th {
   background-color: var(--wh);
   text-align: left;
   padding: 0 var(--space-16);
 }
-.search_box table td {
+.search_box table td,
+.list_box table td {
   padding: var(--space-8);
 }
 .search_box table td.btn_area button {
@@ -530,6 +534,9 @@ textarea:disabled {
   justify-content: space-between;
 }
 
+html {
+  font-size: 100%;
+}
 * {
   box-sizing: border-box;
   outline: none;
@@ -563,14 +570,14 @@ img {
 
 /* font */
 :root {
-  --h3: 48px;
-  --h5: 24px;
-  --h6: 20px;
-  --subtitle01: 16px;
-  --subtitle02: 14px;
-  --body01: 16px;
-  --body02: 14px;
-  --caption: 12px;
+  --h3: 3rem;
+  --h5: 1.5rem;
+  --h6: 1.25rem;
+  --subtitle01: 1rem;
+  --subtitle02: .875rem;
+  --body01: 1rem;
+  --body02: .875rem;
+  --caption: .75rem;
 }
 
 h3 {
@@ -1053,7 +1060,7 @@ summary::-webkit-details-marker {
 summary {
   display: block;
   font-size: var(--subtitle01);
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   position: relative;
   padding: var(--space-8) var(--space-16);
