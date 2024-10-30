@@ -41,13 +41,22 @@
           <table>
             <colgroup>
               <col >
-              <col style="width: 35%;">
+              <col style="width: 25%;">
               <col >
-              <col style="width: 35%;">
+              <col style="width: 25%;">
+              <col >
+              <col style="width: 25%;">
               <col style="width: 100px;">
             </colgroup>
             <tr>
               <th>부서</th>
+              <td>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">선택</option>
+                </select>
+              </td>
+              <th>팀</th>
               <td>
                 <select name="" id="">
                   <option value="">전체</option>
@@ -65,6 +74,13 @@
               </td>
             </tr>
             <tr>
+              <th>상태</th>
+              <td>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">선택</option>
+                </select>
+              </td>
               <th>요청자</th>
               <td>
                 <select name="" id="">
@@ -72,7 +88,7 @@
                   <option value="">선택</option>
                 </select>
               </td>
-              <th>요청일</th>
+              <th>요청일자</th>
               <td>
                 <div class="clalender_wrap">
                   <input type="date" name="" id=""> ~ 
@@ -104,7 +120,8 @@
             </div>
 
             <div class="aera">
-              <button class="bk sm" onclick="location.href='/TaskDefineCreate.html'">신규 생성</button>
+              <button class="bk_outline sm">목록받기</button>
+              <button class="bk sm" onclick="location.href='/TaskDefineCreate.html'">과제요청</button>
             </div>
           </div>
           <!-- table_top_wrap end -->
@@ -115,10 +132,8 @@
               <colgroup>
                 <col />
                 <col />
+                <col />
                 <col width= "30%;">
-                <col />
-                <col />
-                <col />
                 <col />
                 <col />
                 <col />
@@ -127,183 +142,81 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th>부서</th>
-                  <th>우선순위</th>
+                  <th>접수번호</th>
+                  <th>부서명</th>
+                  <th>팀명</th>
                   <th>업무명</th>
-                  <th>담당자</th>
-                  <th>연간작업시간</th>
-                  <th>가능성</th>
-                  <th>리스크</th>
-                  <th>시작/종료시간</th>
-                  <th>난이도</th>
-                  <th>시급성</th>
-                  <th>완료예정일</th>
+                  <th>업무영역</th>
+                  <th>업무유형</th>
+                  <th>상태</th>
+                  <th>요청자</th>
+                  <th>요청일자</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
+                  <td>2024-001</td>
+                  <td>RPA</td>
+                  <td>UIUX팀</td>
                   <td class="left">
                     <a href="">업무명입니다.</a>
                   </td>
+                  <td>업무영역</td>
+                  <td>업무유형</td>
+                  <td>상태</td>
                   <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
                   <td>2024.12.12</td>
                 </tr>
                 <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
+                  <td>2024-001</td>
+                  <td>RPA</td>
+                  <td>UIUX팀</td>
                   <td class="left">
                     <a href="">업무명입니다.</a>
                   </td>
+                  <td>업무영역</td>
+                  <td>업무유형</td>
+                  <td>상태</td>
                   <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
                   <td>2024.12.12</td>
                 </tr>
                 <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
+                  <td>2024-001</td>
+                  <td>RPA</td>
+                  <td>UIUX팀</td>
                   <td class="left">
                     <a href="">업무명입니다.</a>
                   </td>
+                  <td>업무영역</td>
+                  <td>업무유형</td>
+                  <td>상태</td>
                   <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
                   <td>2024.12.12</td>
                 </tr>
                 <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
+                  <td>2024-001</td>
+                  <td>RPA</td>
+                  <td>UIUX팀</td>
                   <td class="left">
                     <a href="">업무명입니다.</a>
                   </td>
+                  <td>업무영역</td>
+                  <td>업무유형</td>
+                  <td>상태</td>
                   <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
                   <td>2024.12.12</td>
                 </tr>
                 <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
+                  <td>2024-001</td>
+                  <td>RPA</td>
+                  <td>UIUX팀</td>
                   <td class="left">
                     <a href="">업무명입니다.</a>
                   </td>
+                  <td>업무영역</td>
+                  <td>업무유형</td>
+                  <td>상태</td>
                   <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2024.12.12</td>
-                </tr>
-                <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
-                  <td class="left">
-                    <a href="">업무명입니다.</a>
-                  </td>
-                  <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2024.12.12</td>
-                </tr>
-                <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
-                  <td class="left">
-                    <a href="">업무명입니다.</a>
-                  </td>
-                  <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2024.12.12</td>
-                </tr>
-                <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
-                  <td class="left">
-                    <a href="">업무명입니다.</a>
-                  </td>
-                  <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2024.12.12</td>
-                </tr>
-                <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
-                  <td class="left">
-                    <a href="">업무명입니다.</a>
-                  </td>
-                  <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2024.12.12</td>
-                </tr>
-                <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
-                  <td class="left">
-                    <a href="">업무명입니다.</a>
-                  </td>
-                  <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2024.12.12</td>
-                </tr>
-                <tr>
-                  <td>RPA사업팀</td>
-                  <td>5순위</td>
-                  <td class="left">
-                    <a href="">업무명입니다.</a>
-                  </td>
-                  <td>NTAS</td>
-                  <td>21</td>
-                  <td>4.1</td>
-                  <td>4.1</td>
-                  <td>9시/9시30분</td>
-                  <td>1</td>
-                  <td>1</td>
                   <td>2024.12.12</td>
                 </tr>
               </tbody>

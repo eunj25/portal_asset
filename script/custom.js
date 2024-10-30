@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
 const pageTitles = {
   asset: 'RPA Portal design asset',
   TaskDefine: '자동화업무 제안/선정',
-  TaskDefineCreate: '자동화업무 제안/선정',
+  TaskDefineCreate: '자동화 과제요청',
   TaskDeployConfirm: '배포실행/승인',
   TaskDevelopStatus: '과제목록',
   TaskDevelopDetails: '과제상세',
@@ -40,6 +40,7 @@ const pageTitles = {
   // 관리자
   BaseInfoValue: '기타 설정',
   Members: '사용자 관리',
+  TaskProcessApproveLevel: '업무단계별 승인권한 설정',
   MenuAccessLevel: '메뉴권한 설정',
 
   // 헬프
@@ -69,6 +70,7 @@ const pageHint = {
   // 관리자
   BaseInfoValue: 'Portal 관리를 위한 기타 설정 관리',
   Members: '목록',
+  TaskProcessApproveLevel: '상세',
   MenuAccessLevel: '상세',
 
   // 헬프

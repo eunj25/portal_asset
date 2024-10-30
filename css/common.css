@@ -228,7 +228,7 @@ button.mini:hover {
   
   --input-error: 1px solid var(--danger50);
   --input-focurs: 1px solid var(--secondary20);
-  --input-disabled: 1px solid var(--gray50);
+  --input-disabled: 1px solid var(--gray40);
 }
 
 input[type=file],
@@ -303,6 +303,7 @@ textarea {
   padding: var(--input-padding);
   transition: 0.25s;
   color: var(--bk);
+  cursor: pointer;
 }
 input:hover,
 select:hover,
@@ -332,7 +333,7 @@ input:disabled,
 select:disabled,
 textarea:disabled {
   border: var(--input-disabled);
-  background-color: var(--wh); 
+  background-color: var(--gray20); 
   color: var(--gray60);
 }
 
@@ -786,6 +787,21 @@ nav .sub_menu a:hover {
   background-color: var(--primary20);
 }
 
+/* badge */
+.badge {
+  font-size: var(--body02);
+  background-color: var(--secondary50);
+  color: var(--wh);
+  padding: var(--button-padding-xs);
+  border-radius: var(--border-radius);
+}
+.badge.bl {background-color: var(--secondary50);} 
+.badge.rd {background-color: var(--danger50);} 
+.badge.ye {background-color: var(--warning60);} 
+.badge.gr {background-color: var(--success60);} 
+.badge.gy {background-color: var(--gray80);} 
+.badge.sk {background-color: var(--primary50);} 
+
 
 /* table */
 .table_top_wrap {
@@ -901,7 +917,17 @@ table .btn_area {
 .count_info_list .count_base {
   align-items: flex-end;
   font-weight: normal;
+  color: var(--bk);
 }
+
+/* count_info_list color */
+.count_info_list.bl {color: var(--secondary50);} 
+.count_info_list.rd {color: var(--danger50);} 
+.count_info_list.ye {color: var(--warning60);} 
+.count_info_list.gr {color: var(--success60);} 
+.count_info_list.gy {color: var(--gray80);} 
+.count_info_list.sk {color: var(--primary50);} 
+
 
 /* tab_menu */
 .tab_menu {
@@ -1094,6 +1120,7 @@ details[open] summary::after {
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--space-24);
+  gap: var(--space-12);
 }
 .item_list:last-child {
   margin: 0;
