@@ -1,26 +1,27 @@
-// include
-window.addEventListener('load', () => {
-  const allElements = document.getElementsByTagName('*');
-  Array.prototype.forEach.call(allElements, (el) => {
-    const includePath = el.dataset.includePath;
-    if (includePath) {
-      fetch(includePath)
-        .then(response => {
-          if (response.ok) {
-            return response.text();
-          } else {
-            return null;
-          }
-        })
-        .then(data => {
-          if (data) {
-            el.outerHTML = data;
-          }
-        })
-      } 
-  });
-});
+// include header
+$(function(){
+  $('.header').load('/include/header.html',
+    function(){
+      $('#myPageModal').on('click', function() {
+        $('.bg').fadeIn(200);
+        $('#myPage').fadeIn(200);
+      });
+    
+      $('#myPage #closeModal, .bg').on('click', function() {
+        $('.bg').fadeOut(200);
+        $('#myPage').fadeOut(200);
+      });
+    
+      $('#myPage #checkModal').on('click', function() {
+        $('.bg').fadeOut(200);
+        $('#myPage').fadeOut(200);
+      });
+    });
 
+  $('.menu').load('/include/menu.html')
+  $('.footer').load('/include/footer.html')
+})
+  
 // pagetitle
 const pageTitles = {
   asset: 'RPA Portal design asset',
@@ -32,6 +33,7 @@ const pageTitles = {
 
   // 운영관리
   TaskOperationStatus: '운영 관리',
+  TaskSchedule: '스케쥴 관리',
 
   // 리포트/통계
   TaskKPIs: 'KPIs',
@@ -62,6 +64,7 @@ const pageHint = {
 
   // 운영관리
   TaskOperationStatus: '운영과제 관리 및 프로세스 실행',
+  TaskSchedule: '운영과제 별 실행 스케쥴 관리',
 
   // 리포트/통계
   TaskKPIs: 'RPA KPI 리포트',
@@ -132,7 +135,8 @@ $(document).ready(function() {
     $('.bg').fadeOut(200);
     $('#prompt').fadeOut(200);
   });
-  
+
+
 });
 
 const toggleList = document.querySelectorAll(".toggleSwitch");

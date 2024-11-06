@@ -14,4 +14,54 @@
   </div>
 </header>
 
+<!-- ////////////// myPage modal start -->
+ <div class="bg"></div>
+<div class="modal prompt position_center" id="myPage">
+  <div class="modal_head">
+    마이페이지
+  </div>
+  <div class="modal_body">
+    <div class="modal_desc">
+      <div class="photo">
+        <img src="/images/user.png" alt="">
+        <a href="" title="수정"><span class="material-symbols-outlined">edit</span></a>
+      </div>
+
+      <div class="flex_md">
+        <div>
+          <div class="input_wrap">
+            <div class="item_title">이름</div>
+            <input type="text" placeholder="text" readonly value="신은주">
+          </div>
+          <div class="input_wrap">
+            <div class="item_title">부서명</div>
+            <input type="text" placeholder="text" readonly value="UI/UX팀">
+          </div>
+          <div class="input_wrap">
+            <div class="item_title">휴대전화</div>
+            <input type="text" placeholder="text" readonly value="010-9999-9999">
+          </div>
+        </div>
+        <div>
+          <div class="input_wrap">
+            <div class="item_title">권한 그룹</div>
+            <input type="text" placeholder="text" readonly value="NTAS">
+          </div>
+          <div class="input_wrap">
+            <div class="item_title">이메일</div>
+            <input type="text" placeholder="text" readonly value="NTAS@ntas.co.kr">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn_area">
+      <button class="bk_outline sm" id="closeModal" onclick="location.href='/Auth/login.html'">로그아웃</button>
+      <button class="bk_outline sm" id="closeModal" onclick="location.href='/Auth/join.html'">비밀번호 변경</button>
+      <button class="bk sm" id="checkModal">회원정보 수정</button>
+    </div>
+  </div>
+</div>
+<!-- myPage modal end -->
+
 

@@ -285,7 +285,6 @@ input[type='file'] {
 .input_wrap .item_title {
   padding: 0px var(--space-6);
 }
-
 .item_title {
   padding: var(--space-8) var(--space-6);
   font-weight: 700;
@@ -336,7 +335,6 @@ select:invalid:focus,
 textarea:invalid:focus {
   box-shadow: var(--input-error-shadow);
 }
-
 input:disabled,
 select:disabled,
 textarea:disabled {
@@ -344,6 +342,26 @@ textarea:disabled {
   background-color: var(--gray20); 
   color: var(--gray60);
 }
+input:read-only:hover {
+  border: var(--border);
+}
+input:read-only:focus {
+  border: var(--border);
+  box-shadow: none;
+}
+input:required + span.input_hint,
+select:required + span.input_hint,
+textarea:required + span.input_hint {
+  display: block;
+}
+
+.input_hint {
+  display: none;
+  width: 100%;
+  padding: 0 var(--space-12);
+  color: var(--danger50);
+}
+
 
 .control_wrap {
   display: flex;
@@ -645,6 +663,18 @@ header .profile_box {
   display: flex;
   align-items: center;
   gap: var(--space-12);
+  padding: 0 var(--space-8);
+  border-radius: var(--border-radius);
+}
+
+header .profile_box:hover {
+  background-color: #111;
+  cursor: pointer;
+}
+header .profile_box .photo {
+  width: 34px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .logo {

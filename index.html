@@ -11,16 +11,17 @@
   <!-- google font-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- custom CSS & JS-->
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/reset.css">
   <script src="/script/custom.js"></script>
 </head>
 <body>
 
-  <div data-include-path="include/header.html"></div>
+  <!--   <div class="header"></div> -->
+  <div class="header"></div>
   
-  <!-- modal start -->
+  <!-- ////////////// modal start -->
   <div class="bg"></div>
 
   <div class="modal prompt position_center" id="prompt">
@@ -39,9 +40,59 @@
     </div>
   </div>
   <!-- modal end -->
-  
+
+  <!-- ////////////// myPage modal start -->
+  <div class="modal prompt position_center" id="myPage">
+    <div class="modal_head">
+      마이페이지
+    </div>
+    <div class="modal_body">
+      <div class="modal_desc">
+        <div class="photo">
+          <img src="/images/user.png" alt="">
+          <a href="" title="수정"><span class="material-symbols-outlined">edit</span></a>
+        </div>
+
+        <div class="flex_md">
+          <div>
+            <div class="input_wrap">
+              <div class="item_title">이름</div>
+              <input type="text" placeholder="text" readonly value="신은주">
+            </div>
+            <div class="input_wrap">
+              <div class="item_title">부서명</div>
+              <input type="text" placeholder="text" readonly value="UI/UX팀">
+            </div>
+            <div class="input_wrap">
+              <div class="item_title">휴대전화</div>
+              <input type="text" placeholder="text" readonly value="010-9999-9999">
+            </div>
+          </div>
+          <div>
+            <div class="input_wrap">
+              <div class="item_title">권한 그룹</div>
+              <input type="text" placeholder="text" readonly value="NTAS">
+            </div>
+            <div class="input_wrap">
+              <div class="item_title">이메일</div>
+              <input type="text" placeholder="text" readonly value="NTAS@ntas.co.kr">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn_area">
+        <button class="bk_outline sm" id="closeModal" onclick="location.href='/Auth/login.html'">로그아웃</button>
+        <button class="bk_outline sm" id="closeModal" onclick="location.href='/Auth/join.html'">비밀번호 변경</button>
+        <button class="bk sm" id="checkModal">회원정보 수정</button>
+      </div>
+    </div>
+  </div>
+  <!-- myPage modal end -->
+
   <main>
-    <div data-include-path="include/menu.html"></div> 
+    <!--   <div class="menu"></div>  -->
+    <div class="menu"></div>
 
     <div class="container">
 
@@ -63,47 +114,31 @@
 
           <!-- ////////////// input start -->
           <h2 style="margin-bottom: 10px;">input</h2>
-          <div class="flex flex_md">
+          <div class="flex flex_lg">
             <div>
               <!-- input_wrap start -->
               <div class="input_wrap">
-                <div class="item_title">text</div>
+                <div class="item_title">text normal</div>
                 <input type="text" placeholder="text">
               </div>
               <div class="input_wrap">
-                <div class="item_title">text</div>
+                <div class="item_title">text error</div>
                 <input type="text" placeholder="text" required>
+                <span class="input_hint">*input .required 제거하면 display:none 됩니다.</span>
               </div>
-    
               <div class="input_wrap">
-                <div class="item_title">text</div>
-                <select name="" id="" disabled>
-                  <option value="">전체</option>
-                  <option value="">선택</option>
-                </select>
-
-                <div class="input_wrap">
-                  <div class="item_title">text</div>
-                  <input type="date" name="" id="">
-
-                  <div class="flex_sm_center">
-                    <input type="date" name="" id=""> ~ 
-                    <input type="date" name="" id="">
-                  </div>
-                </div>
+                <div class="item_title">text readonly</div>
+                <input type="text" placeholder="text" readonly value="test">
+                <span class="input_hint">*input .required 제거하면 display:none 됩니다.</span>
               </div>
-              <!-- input_wrap end -->
-            </div>
-
-            <div>
-              <!-- input_wrap start -->
               <div class="input_wrap">
-                <div class="item_title essential">text</div>
-                <textarea name="" id=""></textarea>
+                <div class="item_title">text disabled</div>
+                <input type="text" placeholder="text" disabled>
+                <span class="input_hint">*input .required 제거하면 display:none 됩니다.</span>
               </div>
-    
+  
               <div class="input_wrap">
-                <div class="item_title essential">text</div>
+                <div class="item_title">file</div>
                 <div class="file_wrap">
                   <input id="upload" type="file" multiple>
                   <label class="file_btn" for="upload">파일선택</label>
@@ -112,12 +147,41 @@
               </div>
               <!-- input_wrap end -->
             </div>
+
+            <div>
+              <!-- input_wrap start -->
+              <div class="input_wrap">
+                <div class="item_title">select normal</div>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">선택</option>
+                </select>
+
+                <div class="input_wrap">
+                  <div class="item_title">date normal</div>
+                  <input type="date" name="" id="">
+
+                  <div class="flex_sm_center">
+                    <input type="date" name="" id=""> ~ 
+                    <input type="date" name="" id="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <div class="item_title essential">textarea error</div>
+                <textarea name="" id="" required ></textarea>
+                <span class="input_hint">*input .required 제거하면 display:none 됩니다.</span>
+              </div>
+
+              <!-- input_wrap end -->
+            </div>
           </div>
           <!-- input end -->
           
 
           <!-- ////////////// checkbox end -->
-          <h2 style="margin-bottom: 10px;">checkbox</h2>
+          <h2 style="margin: 10px 0;">checkbox</h2>
           <section>
             <div class="control_wrap">
               <div class="checkbox_wrap">
@@ -1038,7 +1102,7 @@
         </div>
       </div>
 
-      <div data-include-path="include/footer.html"></div>
+        <div class="footer"></div>
     </div>
   </main>
 
@@ -1065,7 +1129,7 @@
       $(this).siblings('.file_name').html(fileList);
       
     });
-    
+
   </script>
 
 </body>
