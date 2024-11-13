@@ -18,7 +18,7 @@
 </head>
 <body>
 
-  <!--   <div class="header"></div> -->
+  <!-- ////////////// header inclue -->
   <div class="header"></div>
   
   <!-- ////////////// modal start -->
@@ -41,60 +41,14 @@
   </div>
   <!-- modal end -->
 
-  <!-- ////////////// myPage modal start -->
-  <div class="modal prompt position_center" id="myPage">
-    <div class="modal_head">
-      마이페이지
-    </div>
-    <div class="modal_body">
-      <div class="modal_desc">
-        <div class="photo">
-          <img src="/images/user.png" alt="">
-          <a href="" title="수정"><span class="material-symbols-outlined">edit</span></a>
-        </div>
-
-        <div class="flex_md">
-          <div>
-            <div class="input_wrap">
-              <div class="item_title">이름</div>
-              <input type="text" placeholder="text" readonly value="신은주">
-            </div>
-            <div class="input_wrap">
-              <div class="item_title">부서명</div>
-              <input type="text" placeholder="text" readonly value="UI/UX팀">
-            </div>
-            <div class="input_wrap">
-              <div class="item_title">휴대전화</div>
-              <input type="text" placeholder="text" readonly value="010-9999-9999">
-            </div>
-          </div>
-          <div>
-            <div class="input_wrap">
-              <div class="item_title">권한 그룹</div>
-              <input type="text" placeholder="text" readonly value="NTAS">
-            </div>
-            <div class="input_wrap">
-              <div class="item_title">이메일</div>
-              <input type="text" placeholder="text" readonly value="NTAS@ntas.co.kr">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="btn_area">
-        <button class="bk_outline sm" id="closeModal" onclick="location.href='/Auth/login.html'">로그아웃</button>
-        <button class="bk_outline sm" id="closeModal" onclick="location.href='/Auth/join.html'">비밀번호 변경</button>
-        <button class="bk sm" id="checkModal">회원정보 수정</button>
-      </div>
-    </div>
-  </div>
-  <!-- myPage modal end -->
-
   <main>
-    <!--   <div class="menu"></div>  -->
+    <!-- ////////////// menu inclue -->
     <div class="menu"></div>
 
     <div class="container">
+
+      <!-- ////////////// myTask inclue -->
+      <div class="myTask"></div>
 
       <!-- ////////////// pageHeader start -->
       <div class="page_header">
@@ -170,7 +124,7 @@
 
               <div class="input_wrap">
                 <div class="item_title essential">textarea error</div>
-                <textarea name="" id="" required ></textarea>
+                <textarea name="" id="" maxlength="100" required ></textarea>
                 <span class="input_hint">*input .required 제거하면 display:none 됩니다.</span>
               </div>
 
@@ -180,7 +134,7 @@
           <!-- input end -->
           
 
-          <!-- ////////////// checkbox end -->
+          <!-- ////////////// checkbox start -->
           <h2 style="margin: 10px 0;">checkbox</h2>
           <section>
             <div class="control_wrap">
@@ -215,6 +169,35 @@
             </div>
           </section>
           <!-- ////////////// checkbox end -->
+
+          <!-- ////////////// radio start -->
+          <h2 style="margin: 10px 0;">radio</h2>
+          <section>
+
+            <div class="control_wrap">
+              <label for="radio01">
+                <input type="radio" name="radio" id="radio01" >
+                <span>라디오 버튼</span>
+              </label>
+              
+              <label for="radio02">
+                <input type="radio" name="radio" id="radio02" checked>
+                <span>체크 라디오 버튼</span>
+              </label>
+             
+              <label for="radio03"> 
+                <input type="radio" name="radio02" id="radio03" disabled>
+                <span> 체크 안된 disabled 라디오 버튼</span>
+              </label>
+              
+              <label for="radio04">
+                <input type="radio" name="radio02" id="radio04" checked disabled>
+                <span> 체크된 disabled 라디오 버튼</span>
+              </label>
+            </div>
+           
+          </section>
+          <!-- ////////////// radio end -->
           
 
           <!-- ////////////// badge start -->
@@ -485,7 +468,7 @@
                   </div>
                 </div>
                 <!-- count_info end -->
-
+                 
                 <!-- ////////////// select_aera start -->
                 <div class="select_aera">
                   <select name="" id="">
@@ -717,7 +700,83 @@
 
           <!-- ////////////// tab start-->
           <h2 style="margin-bottom: 10px; margin-top: 30px;">tab Menu / card</h2>
-          <section>
+          <section style="margin-bottom: 10px; margin-top: 30px;">
+            <div class="tab_menu line">
+              <button class="tab_button active" data-tab="tab_lline_1">tab_lline_1</button>
+              <button class="tab_button" data-tab="tab_lline_2">tab_lline_2</button>
+              <button class="tab_button" data-tab="tab_lline_3">tab_lline_3</button>
+            </div>
+  
+            <div class="tab_content active" id="tab_lline_1">
+              <!-- card start -->
+              <div class="card">
+                <div class="card_head">
+                  <div class="subtitle02">card title</div>
+                  <span class="caption">hint text</span>
+                  <span class="material-symbols-outlined icon">
+                    arrow_right_alt
+                  </span>
+                </div>
+                <div class="card_body">
+                  card
+                </div>
+              </div>
+              <!-- card end -->
+            </div>
+            <div class="tab_content" id="tab_lline_2"> 
+              <div class="card_wrap">
+                <!-- card start -->
+                <div class="card">
+                  <div class="card_head">
+                    <div class="subtitle02">card title</div>
+                    <span class="caption">hint text</span>
+                    <span class="material-symbols-outlined icon">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                  <div class="card_body">
+                    card
+                  </div>
+                </div>
+                <!-- card end -->
+                <!-- card start -->
+                <div class="card">
+                  <div class="card_head">
+                    <div class="subtitle02">card title</div>
+                    <span class="caption">hint text</span>
+                    <span class="material-symbols-outlined icon">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                  <div class="card_body">
+                    card
+                  </div>
+                </div>
+                <!-- card end -->
+                 <!-- card start -->
+                <div class="card">
+                  <div class="card_head">
+                    <div class="subtitle02">card title</div>
+                    <span class="caption">hint text</span>
+                    <span class="material-symbols-outlined icon">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                  <div class="card_body">
+                    card
+                  </div>
+                </div>
+                <!-- card end -->
+              </div>
+            </div>
+            <div class="tab_content" id="tab_lline_3">
+              <div class="paper">
+                item content
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 10px; margin-top: 30px;">
             <div class="tab_menu">
               <button class="tab_button active" data-tab="tab1">Tab 1 _card</button>
               <button class="tab_button" data-tab="tab2">Tab 2 _card 3nd</button>

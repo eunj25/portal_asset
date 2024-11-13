@@ -18,6 +18,19 @@ $(function(){
       });
     });
 
+  $('.myTask').load('/include/myTask.html',
+    function(){
+      $('.myTask_box_icon').on('click', function() {
+        $('.bg').fadeIn(200);
+        $('.myTask_box, .myTask_box_icon').addClass('active')
+      });
+      $('.bg').on('click', function() {
+        $('.bg').fadeOut(200);
+        $('.myTask_box, .myTask_box_icon').removeClass('active');
+      });
+    
+    }
+  )
   $('.menu').load('/include/menu.html')
   $('.footer').load('/include/footer.html')
 })
@@ -118,6 +131,42 @@ document.addEventListener("DOMContentLoaded", function() {
   tabButtons.forEach(button => button.addEventListener("click", switchTab));
 });
 
+// stepButtons
+document.addEventListener("DOMContentLoaded", function() {
+
+  const stepButtons = document.querySelectorAll(".step_btutton");
+  const stepContents = document.querySelectorAll(".step_content");
+  let currentStep = 1;
+
+  function showStep(step) {
+    stepContents.forEach(content => content.classList.remove("active"));
+    stepButtons.forEach((button, index) => {
+      if (index < step - 1) {
+        button.classList.add("completed");
+        button.classList.remove("active");
+      } else if (index === step - 1) {
+        button.classList.add("active");
+        button.classList.remove("completed");
+      } else {
+        button.classList.remove("active", "completed");
+      }
+    });
+
+    // step content 
+    document.getElementById(`step-${step}`).classList.add("active");
+  }
+
+  stepButtons.forEach(button => {
+    button.addEventListener("click", function(event) {
+      currentStep = parseInt(event.currentTarget.dataset.tab.split('-')[1]);
+      showStep(currentStep);
+    });
+  });
+  
+  showStep(currentStep);
+
+});
+
 // modal
 $(document).ready(function() {
 
@@ -135,7 +184,6 @@ $(document).ready(function() {
     $('.bg').fadeOut(200);
     $('#prompt').fadeOut(200);
   });
-
 
 });
 

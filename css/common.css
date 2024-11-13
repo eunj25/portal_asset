@@ -362,7 +362,6 @@ textarea:required + span.input_hint {
   color: var(--danger50);
 }
 
-
 .control_wrap {
   display: flex;
   align-items: center;
@@ -420,6 +419,13 @@ textarea:required + span.input_hint {
 [type="checkbox"] {
   cursor: pointer;
 }
+[type="checkbox"] + .label_box .check_icon {
+transition: .25s;
+}
+[type="checkbox"]:hover + .label_box .check_icon {
+  box-shadow: 0 0 0 max(2px, 0.2em) lightgray;
+  cursor: pointer;
+}
 /* check background */
 [type="checkbox"]:checked + .label_box .check_icon {
   border-color:  var(--secondary50);
@@ -430,6 +436,15 @@ textarea:required + span.input_hint {
   background-color: var(--gray30);
 }
 /* check */
+[type="checkbox"]:disabled + .label_box label {
+  opacity: 0.7;
+}
+[type="checkbox"]:disabled:checked:hover + .label_box .check_icon {
+  box-shadow: none;
+}
+[type="checkbox"]:disabled:hover + .label_box .check_icon {
+  box-shadow: none;
+}
 [type="checkbox"]:checked + .label_box .check_icon::before {
   border-color: var(--secondary50);
   display: block;
@@ -440,6 +455,51 @@ textarea:required + span.input_hint {
   display: block;
 }
 
+/* radio */
+[type="radio"], span {
+  vertical-align: middle;
+}
+[type="radio"]:hover + span {
+  cursor: pointer;
+}
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(2px, 0.2em) lightgray;
+  cursor: pointer;
+}
+[type="radio"]:disabled:hover {
+  box-shadow: none;
+}
+
+[type='radio'] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: var(--border);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 .3vw 0 0;
+}
+[type='radio']:checked {
+  border: 2.5px solid var(--wh); 
+  background-color: var(--secondary50);
+  box-shadow: 0 0 0 1px var(--secondary50);
+}
+
+[type="radio"]:disabled {
+  border-color:  var(--gray50);
+  background-color: var(--gray30);
+  cursor: not-allowed;
+}
+[type="radio"]:disabled:checked {
+  border-color:  var(--wh);
+  background-color: var(--gray50);
+  box-shadow: 0 0 0 1px var(--gray50);
+}
+[type="radio"]:disabled + span {
+  opacity: 0.7;
+}
 
 .clalender_wrap {
   display: flex;
@@ -585,6 +645,7 @@ a {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 img {
@@ -1032,6 +1093,90 @@ table .badge {
   display: block;
 }
 
+/* tab_menu .line */
+.tab_menu.line {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+.tab_menu.line .tab_button {
+  width: auto;
+  text-align: left;
+  font-size: var(--body02);
+
+  padding: var(--space-8);
+  color: var(--gray60);
+  background-color: var(--gray30);
+}
+.tab_menu.line .tab_button.active {
+  border: var(--border);
+  background: var(--wh);
+  color: var(--bk);
+}
+
+/* step_content */
+.tab_menu.stepArea {
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+
+  padding: var(--space-24);
+}
+.tab_menu.stepArea button {
+  background-color: transparent;
+  color: var(--gray60);
+}
+.tab_menu.stepArea button span {
+  background-color: var(--gray30);
+
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  display: inline-block;
+}
+button.step_btutton em {
+  font-style: normal;
+  padding: var(--space-4) var(--space-8);
+  display: inline-block;
+  border-radius: var(--border-radius);
+  margin-right: var(--space-8);
+  margin-left: var(--space-16);
+
+  color: var(--gray60);
+  background-color: var(--gray30);
+}
+
+/* completed */
+.tab_menu.stepArea button.completed{
+  color: var(--bk);
+}
+.tab_menu.stepArea button.completed span{
+  background-color: var(--bk);
+}
+button.step_btutton.completed em{
+  color: var(--wh);
+  background-color: var(--bk);
+}
+
+/* active */
+.tab_menu.stepArea button.active {
+  color: var(--secondary50);
+}
+.tab_menu.stepArea button.active span {
+  background-color: var(--secondary50);
+}
+button.step_btutton.active em {
+  background-color: var(--secondary50);
+  color: var(--wh);
+}
+
+.step_content {
+  display: none;
+}
+.step_content.active {
+  display: block;
+}
+
 /* card */
 .card_wrap {
   width: 100%;
@@ -1067,10 +1212,20 @@ table .badge {
   top: 0;
   left: 0;
   z-index: 4;
-  background-color: #33333375;
+  background-color: #3333332a;
   display: none;
 }
-
+.bg_clean {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: transparent;
+  display: none;
+}
 .modal {
   min-width: var(--modal-min-width);
   max-width: var(--modal-max-width);
@@ -1108,6 +1263,7 @@ table .badge {
 }
 .modal .btn_area {
   text-align: right;
+  justify-self: end;
 }
 
 .modal.confirm .modal_body {
