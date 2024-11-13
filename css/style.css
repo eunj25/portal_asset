@@ -134,6 +134,21 @@
   max-height: 300px;
 }
 
+.modal.botSet {
+  min-width: 1000px !important;
+  max-width: 1200px !important;
+  min-height: 550px;
+}
+.modal.botSet .table_box:first-child {
+  flex: 1;
+}
+.modal.botSet .table_box {
+  flex: 2;
+}
+.modal.botSet .table_wrap {
+  height: 400px;
+}
+
 :root {
   --fc-small-font-size: .85em;
   --fc-page-bg-color: #fff;
@@ -169,7 +184,6 @@
   --fc-today-bg-color: var(--secondary5);
   --fc-now-indicator-color: var(--danger50);
 }
-
 
 /* ==================== board */
 .container_inner.board .paper {

@@ -394,18 +394,150 @@
     </div>
   </div>
   <!-- modal end -->
-  <div class="modal schedule position_center" id="schedule" style="display: block;">
+  <div class="modal botSet position_center" id="botSet" style="display: block;">
     <div class="modal_head">
       예약 작업 봇 설정
     </div>
     <div class="modal_body">
       <div class="modal_desc">
-        
+        <div class="flex flex_sm">
+          
+          <!-- 봇 그룹 -->
+          <div class="table_box">  
+            <!-- table_wrap start -->
+            <div class="flex_between">
+              <div class="item_title">봇 그룹</div>
+            </div>
+  
+            <div class="table_wrap border">
+              <table>
+                <colgroup>
+                  <col >
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>전체 봇 그룹</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>봇 그룹 이름입니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- table_wrap end-->
+          </div>
+          <!-- // 봇 그룹 -->
+
+          <!-- 봇 -->
+          <div class="table_box">  
+            <div class="flex_between">
+              <div class="item_title">봇 (3)</div>
+              <div>
+                input들어가야함:(((
+                <button class="bl_outline xs">임의 봇 추가</button>
+              </div>
+            </div>
+            <!-- table_wrap start -->
+            <div class="table_wrap border">
+              <table>
+                <colgroup>
+                  <col >
+                  <col style="width: 90%;">
+                  <col >
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="checkbox_wrap">
+                        <input type="checkbox" checked id="ck01" class="screen_reader" >
+                        <div class="label_box">
+                          <span class="check_icon" aria-hidden="true"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th>봇이름</th>
+                    <th>버전</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="checkbox_wrap">
+                        <input type="checkbox" checked id="ck01" class="screen_reader" >
+                        <div class="label_box">
+                          <span class="check_icon" aria-hidden="true"></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><label for="ck01">봇이름 입니다.</label></td>
+                    <td><label for="ck01">4.44.4000</label></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- table_wrap end-->
+          </div>
+          <!-- // 봇 -->
+
+          <!-- 총 -->  
+          <div class="table_box">  
+            <div class="flex_between">
+              <div class="item_title">총 (3)</div>
+              <div>
+                <button class="rd_outline xs">전체 삭제</button>
+              </div>
+            </div>
+            <!-- table_wrap start -->
+            <div class="table_wrap border">
+              <table>
+                <colgroup>
+                  <col >
+                  <col style="width: 90%;">
+                  <col >
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="checkbox_wrap">
+                        <input type="checkbox" checked id="ck01" class="screen_reader" >
+                        <div class="label_box">
+                          <span class="check_icon" aria-hidden="true"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th>봇그룹</th>
+                    <th>봇이름</th>
+                    <th>버전</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="checkbox_wrap">
+                        <input type="checkbox" checked id="ck01" class="screen_reader" >
+                        <div class="label_box">
+                          <span class="check_icon" aria-hidden="true"></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><label for="ck01">봇그룹 입니다.</label></td>
+                    <td><label for="ck01">봇이름 입니다.</label></td>
+                    <td><label for="ck01">4.44.4000</label></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- table_wrap end-->
+          </div>
+          <!-- // 총 -->  
+        </div>
       </div>
 
       <div class="btn_area">
         <button class="bk_outline sm" id="closeModal">닫기</button>
-        <button class="bk_outline sm">확인</button>
+        <button class="bk sm">확인</button>
       </div>
     </div>
   </div>
