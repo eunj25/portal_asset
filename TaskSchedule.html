@@ -22,7 +22,7 @@
 
   <div class="header"></div>
 
-  <!-- ////////////// modal start -->
+  <!-- ////////////// schedule (예약 작업 등록) modal start -->
   <div class="bg"></div>
   <div class="modal schedule position_center" id="schedule">
     <div class="modal_head">
@@ -195,11 +195,11 @@
                   <tbody>
                     <tr>
                       <td class="left">
-                        이름 이름입니다.
+                        <div>이름 이름입니다.</div>
                       </td>
                       <td>1.12</td>
                       <td class="left">
-                        설명 설명입니다.
+                        <div>설명 설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다.</div>
                       </td>
                       <td>NTAS</td>
                       <td>2024.12.12</td>
@@ -265,35 +265,39 @@
               </div>
             </div>
             <!-- count_info end -->
-            <button class="bk_outline md"><span class="material-symbols-outlined">add</span></button>
+            <button class="bk_outline md" id="botSetModal"><span class="material-symbols-outlined">add</span></button>
             
-            <div class="table_wrap border">
+            <!-- ////////////// table start -->
+            <!-- <div class="table_wrap border">
               <table>
                 <colgroup>
-                  <col style="width: 50%;">
-                  <col >
-                  <col style="width: 50%;">
-                  <col >
+                  <col style="width: 40%;">
+                  <col style="width: 40%;">
                   <col >
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>이름</th>
+                    <th>봇 그룹</th>
+                    <th>봇 이름</th>
                     <th>버전</th>
-                    <th>설명</th>
-                    <th>수정자</th>
-                    <th>수정일시</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td colspan="5">
-                      과제가 없습니다. 
+                    <td>그룹 이름</td>
+                    <td>이름</td>
+                    <td>4.4444.4400</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      봇이 없습니다. 
                     </td>
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div> -->
+            <!-- ////////////// table end -->
+
           </div>
         </div>
         
@@ -306,8 +310,8 @@
             <table>
               <colgroup>
                 <col >
-                <col style="width: 60%;">
-                <col >
+                <col style="width: 40%;">
+                <col style="width: 40%;">
               </colgroup>
               <thead>
                 <tr>
@@ -319,18 +323,11 @@
               <tbody>
                 <tr>
                   <td class="left">
-                    이름
+                    <div>이름</div>
                   </td>
-                  <td> </td>
-                  <td>
-                    <input type="text" value="value" disabled>
-                  </td>
-                </tr>
-                <tr>
                   <td class="left">
-                    이름
+                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non rem delectus quos vitae corporis deserunt atque? Saepe exercitationem cum, vel, eum rerum est accusamus fugiat quos quis, similique provident unde?</div>
                   </td>
-                  <td> </td>
                   <td>
                     <input type="text" value="value" disabled>
                   </td>
@@ -393,8 +390,10 @@
       </div>
     </div>
   </div>
-  <!-- modal end -->
-  <div class="modal botSet position_center" id="botSet" style="display: block;">
+  <!-- schedule modal end -->
+
+  <!-- ////////////// botSet(봇 설정) modal start -->
+  <div class="modal botSet position_center" id="botSet">
     <div class="modal_head">
       예약 작업 봇 설정
     </div>
@@ -434,8 +433,11 @@
           <div class="table_box">  
             <div class="flex_between">
               <div class="item_title">봇 (3)</div>
-              <div>
-                input들어가야함:(((
+              <div class="flex_sm_center" style="justify-content: flex-end;">
+                <div class="searchbar">
+                  <input type="text" class="sm" placeholder="이름, 버전">
+                  <button class="bk_outline xs">검색</button>
+                </div>
                 <button class="bl_outline xs">임의 봇 추가</button>
               </div>
             </div>
@@ -444,7 +446,7 @@
               <table>
                 <colgroup>
                   <col >
-                  <col style="width: 90%;">
+                  <col style="width: 50%;">
                   <col >
                 </colgroup>
                 <thead>
@@ -494,7 +496,8 @@
               <table>
                 <colgroup>
                   <col >
-                  <col style="width: 90%;">
+                  <col style="width: 30%;">
+                  <col style="width: 30%;">
                   <col >
                 </colgroup>
                 <thead>
@@ -541,6 +544,7 @@
       </div>
     </div>
   </div>
+  <!--  botSet modal end -->
 
   <main>
     <div class="menu"></div>
@@ -576,17 +580,21 @@
     updateTitle('TaskSchedule'); 
 
     document.addEventListener('DOMContentLoaded', function() {
+
+      var localeSelectorEl = document.getElementById('locale-selector');
       var calendarEl = document.getElementById('calendar');
+
       var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
+        nowIndicator: true,
         locale: 'ko',
   
         headerToolbar: {
             left: 'prevYear,prev,next,nextYear today',
             center: 'title',
-            right: 'dayGridMonth,dayGridWeek,dayGridDay'
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
-        navLinks: false, // 요일이랑 날짜 클릭 시 일이나 주단위 보여주는 화면으로 넘어감
+        navLinks: true, // 요일이랑 날짜 클릭 시 일이나 주단위 보여주는 화면으로 넘어감
         editable: true, // 드래그해서 수정 가능한지. 길게 확장도 가능
         dayMaxEvents: true, // +more 표시 전 최대 이벤트 갯수. true는 셀 높이에 의해 결정
         
@@ -616,6 +624,14 @@
     $('#schedule #closeModal, .bg').on('click', function() {
       $('.bg').fadeOut(200);
       $('#schedule').fadeOut(200);
+    });
+
+    // 봇 설정 modal
+    $('#botSetModal').on('click', function() {
+      $('#botSet').fadeIn(200);
+    });
+    $('#botSet #closeModal, .bg').on('click', function() {
+      $('#botSet').fadeOut(200);
     });
 
   </script>
