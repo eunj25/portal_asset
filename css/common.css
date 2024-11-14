@@ -1118,7 +1118,7 @@ table .badge {
   border-radius: 0;
   background-color: transparent;
 }
-.tab_menu.line .tab_button {
+.tab_menu.line button {
   width: auto;
   text-align: left;
   font-size: var(--body02);
@@ -1127,7 +1127,7 @@ table .badge {
   color: var(--gray60);
   background-color: var(--gray30);
 }
-.tab_menu.line .tab_button.active {
+.tab_menu.line button.active {
   border: var(--border);
   background: var(--wh);
   color: var(--bk);

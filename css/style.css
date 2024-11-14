@@ -97,7 +97,7 @@
   border-radius: 0;
 }
 .myTask_wrap .task_wrap {
- margin-bottom: var(--space-16);
+  margin-bottom: var(--space-16);
 }
 .myTask_wrap .badge,
 .myTask_wrap .card_body,
@@ -120,6 +120,37 @@
 }
 
 /* ==================== TaskSchedule */
+#tabCalendar select {
+  width: 15%;
+}
+.btnMark button {
+  position: relative;
+  padding-left: var(--space-24) !important;
+}
+.btnMark button:first-child {
+  padding-left: var(--space-8) !important;
+}
+.btnMark button:first-child:before {
+  display: none;
+}
+.btnMark button::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #333;
+}
+.btnMark button.bl_mark::before {background-color: var(--secondary50);}
+.btnMark button.sk_mark::before {background-color: var(--primary50);}
+.btnMark button.gr_mark::before {background-color: var(--success50);}
+.btnMark button.rd_mark::before {background-color: var(--danger40);}
+.btnMark button.gy_mark::before {background-color: var(--gray50);}
+.btnMark button.ye_mark::before {background-color: var(--warning60);}
+
 .modal.schedule {
   min-width: 700px !important;
   max-width: 1000px !important;

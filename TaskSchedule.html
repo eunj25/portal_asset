@@ -564,11 +564,45 @@
       <!-- pageHeader end -->
 
       <div class="container_inner">  
-
-        <div class="paper">
-          <div id='calendar'></div>
+        <div class="tab_menu">
+          <button class="tab_button active" data-tab="tabCalendar">캘린더</button>
+          <button class="tab_button" data-tab="tabSet">예약관리</button>
         </div>
 
+        <!-- ///////// tabCalendar start -->
+        <div class="tab_content active" id="tabCalendar">
+          <div class="flex_sm_center">
+            <!-- select -->
+            <select name="" id="">
+              <option value="">전체</option>
+              <option value="">선택</option>
+            </select>
+            <select name="" id="">
+              <option value="">전체</option>
+              <option value="">선택</option>
+            </select>
+            <!-- button -->
+            <div class="tab_menu line btnMark">
+              <button class="tab_button active">전체(30)</button>
+              <button class="tab_button sk_mark">예약중(30)</button>
+              <button class="tab_button bl_mark">대기중(30)</button>
+              <button class="tab_button ye_mark">실행중(30)</button>
+              <button class="tab_button gr_mark">성공(30)</button>
+              <button class="tab_button rd_mark">실패(30)</button>
+              <button class="tab_button gy_mark">시간초과(30)</button>
+            </div>
+          </div>
+          <div class="paper">
+            <div id='calendar'></div>
+          </div>
+        </div>
+        <!-- // tabCalendar end -->
+
+        <!-- ///////// tab2 start -->
+        <div class="tab_content" id="tabSet">
+          <!-- 빈화면 -->
+        </div>
+        <!-- // tab2 end -->
       </div>
 
       <div class="footer"></div>
