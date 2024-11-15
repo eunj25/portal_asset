@@ -114,21 +114,36 @@ function updateTitle(pageKey) {
 }
 
 // teb_menu
-document.addEventListener("DOMContentLoaded", function() {
-  const tabButtons = document.querySelectorAll(".tab_button");
-  const tabContents = document.querySelectorAll(".tab_content");
+$(document).ready(function() {
+  $('#tabBtn button').on('click', function() {
+    var activeTab = $(this).attr('data-tab');
 
-  function switchTab(event) {
-    tabButtons.forEach(button => button.classList.remove("active"));
-    tabContents.forEach(content => content.classList.remove("active"));
+    $('#tabBtn button').removeClass('active');
+    $('.tab_content').removeClass('active');
+    $(this).addClass('active');
+    $('#' + activeTab).addClass('active');
+  });
+});
 
-    const targetContent = document.getElementById(event.currentTarget.dataset.tab);
+// .table_box 내의 tab
+$(document).ready(function() {
+  $('.table_box .tab_button').on('click', function() {
+    var activeTab = $(this).attr('data-tab');
 
-    event.currentTarget.classList.add("active");
-    targetContent.classList.add("active");
-  }
+    $('.table_box .tab_button').removeClass('active');
+    $('.table_box .tab_content').removeClass('active');
+    $(this).addClass('active');
+    $('#' + activeTab).addClass('active');
+  });
+});
 
-  tabButtons.forEach(button => button.addEventListener("click", switchTab));
+// .btnMark button
+$(document).ready(function() {
+  $('.btnMark button').on('click', function() {
+
+    $('.btnMark button').removeClass('active');
+    $(this).addClass('active');
+  });
 });
 
 // stepButtons
