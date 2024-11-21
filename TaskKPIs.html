@@ -23,9 +23,9 @@
     <div class="header"></div>
   
   <main>
-      <div class="menu"></div> 
+    <div class="menu"></div> 
 
-    <div class="container">
+    <div class="container KPI">
       <!-- pageHeader start -->
       <div class="page_header">
         <div class="title_box">
@@ -34,340 +34,587 @@
         </div>
       </div>
       <!-- pageHeader end -->
-
-      <div class="container_inner">  
-
-        <!-- accordion start -->
-        <div class="accordion">
-          <details open>
-            <summary>KPI 리포트</summary>
-            <div class="accordion_body">
-
-              <div class="flex_xs">
-                <!-- count start -->
-                <div class="count_info_list">
-                  <div class="count_info">
-                    RPA 후보 업무 Pool 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    자동화 된 프로세스 수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    개발중인 프로세스 수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
+            
+      <div class="container_inner">
+        <!-- paper info start -->
+        <div class="flex_md">
+          <div class="paper info_bl info">
+            <div class="felx_column_xs">
+              <span class="material-symbols-outlined icon">
+                bar_chart
+              </span>
+              <h6>연간 절감시간</h6>
+            </div>
+            <div class="count_base">
+              <h3>0.41</h3>
+            </div>
+          </div>
+          <div class="paper info_sk info">
+            <div class="felx_column_xs">
+              <span class="material-symbols-outlined icon">
+                bar_chart
+              </span>
+              <h6>투자수익(ROI)</h6>
+            </div>
+            <div class="count_base">
+              <h3>0.41</h3>
+            </div>
+          </div>
+          <div class="paper info_gr info">
+            <div class="felx_column_xs">
+              <span class="material-symbols-outlined icon">
+                bar_chart
+              </span>
+              <h6>대체 FTE(명)</h6>
+            </div>
+            <div class="count_base">
+              <h3>0.00</h3>
+            </div>
+          </div>
+          <div class="paper info_ye info">
+            <div class="felx_column_xs">
+              <span class="material-symbols-outlined icon">
+                bar_chart
+              </span>
+              <h6>전체/개발</h6>
+            </div>
+            <div class="count_base">
+              <h3>4/ 2</h3>
+            </div>
+          </div>
+          <div class="paper info_rd info">
+            <div class="felx_column_xs">
+              <span class="material-symbols-outlined icon">
+                bar_chart
+              </span>
+              <h6>성공/실패</h6>
+            </div>
+            <div class="count_base">
+              <h3>2/ 2</h3>
+            </div>
+          </div>
+        </div>
+        <!-- paper info end -->
+         <!-- search_wrap start -->
+        <div class="search_box">
+          <table>
+            <colgroup>
+              <col >
+              <col style="width: 25%;">
+              <col >
+              <col style="width: 25%;">
+              <col >
+              <col style="width: 25%;">
+              <col style="width: 100px;">
+            </colgroup>
+            <tr>
+              <th>부서</th>
+              <td>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">선택</option>
+                </select>
+              </td>
+              <th>팀</th>
+              <td>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">선택</option>
+                </select>
+              </td>
+              <th>수행일자</th>
+              <td>
+                <div class="clalender_wrap">
+                  <input type="date" name="" id=""> ~ 
+                  <input type="date" name="" id="">
                 </div>
-                <div class="count_info_list">
-                  <div class="count_info">
-                    금주 처리 건수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    금월 처리 건수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    금년 처리 건수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="count_info_list">
-                  <div class="count_info">
-                    도입된 로봇 수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    실 업무 적용 로봇 수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    로봇 대체 수행 시간 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="count_info_list">
-                  <div class="count_info">
-                    실 적용 부서 수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    적용 업무 인원 수 
-                    <div class="count_base">
-                      <h3>0</h3>
-                    </div>
-                  </div>
-                  <div class="count_info">
-                    자동화 만족 평점 
-                    <div class="count_base">
-                      <h3>60.99</h3>
-                    </div>
-                  </div>
-                </div>
-                <!-- count end -->
+              </td>
+              <td class="btn_area">
+                <button class="bk sm">검색</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- search_box end-->
+        <!-- paper start-->
+        <div class="paper">
+          <div class="flex flex_lg">
+            <div class="table_box">
+              <div class="item_title">과제현황</div>
+              <div class="table_wrap border">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>부서</th>
+                      <th>팀</th>
+                      <th>검토</th>
+                      <th>개발</th>
+                      <th>완료</th>
+                      <th>전체</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-
             </div>
-          </details>
-        </div>
-        <!-- accordion end -->
-
-        <!-- accordion start -->
-        <div class="accordion">
-          <details open>
-            <summary>Bot 가동률 (최근 12개월)</summary>
-            <div class="accordion_body">
-              <div id="chart_A"></div>
-            </div>
-          </details>
-        </div>
-        <!-- accordion end -->
-
-        <!-- accordion start -->
-        <div class="accordion">
-          <details open>
-            <summary>수행 오류율</summary>
-            <div class="accordion_body">
-              <div class="flex_md">
-                <div id="chart"></div>
+            <div class="table_box">
+              <div class="item_title">절감시간 현황</div>
+              <div class="table_wrap border">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>부서</th>
+                      <th>팀</th>
+                      <th>절감시간</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-          </details>
-        </div>
-        <!-- accordion end -->
-        
-        <!-- accordion start -->
-        <div class="accordion">
-          <details open>
-            <summary>투자수익(ROI)</summary>
-            <div class="accordion_body">
-              <!-- paper info start -->
-              <div class="flex_md">
-                <div class="paper info_bl info">
-                  <div class="felx_column_xs">
-                    <span class="material-symbols-outlined icon">
-                      bar_chart
-                    </span>
-                    <h6>총 누적 대체 시간</h6>
-                  </div>
-                  <div class="count_base">
-                    <h3>0.41</h3>
-                  </div>
-                </div>
-                <div class="paper info_gr info">
-                  <div class="felx_column_xs">
-                    <span class="material-symbols-outlined icon">
-                      bar_chart
-                    </span>
-                    <h6>자동화 대체 FTE</h6>
-                  </div>
-                  <div class="count_base">
-                    <h3>0.00</h3>
-                  </div>
-                </div>
-                <div class="paper info_rd info">
-                  <div class="felx_column_xs">
-                    <span class="material-symbols-outlined icon">
-                      bar_chart
-                    </span>
-                    <h6>투자수익(ROI)</h6>
-                  </div>
-                  <div class="count_base">
-                    <h3>-804,950,000</h3>
-                  </div>
-                </div>
-                <div class="paper info_rd info">
-                  <div class="felx_column_xs">
-                    <span class="material-symbols-outlined icon">
-                      bar_chart
-                    </span>
-                    <h6>Bot당 이익</h6>
-                  </div>
-                  <div class="count_base">
-                    <h3>-804,950,000</h3>
-                  </div>
-                </div>
+            <div class="table_box">
+              <div class="item_title">업무절감 우수 과제</div>
+              <div class="table_wrap border">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>부서</th>
+                      <th>팀</th>
+                      <th>과제명</th>
+                      <th>절감시간</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>과제명입니다.</td>
+                      <td>1234.3</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <!-- paper info end -->
             </div>
-          </details>
+            <div class="table_box">
+              <div class="item_title">처리율</div>
+              <div class="table_wrap border">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>부서</th>
+                      <th>팀</th>
+                      <th>성공/실패</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>6</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table_box">
+              <div class="item_title">개발 준수율</div>
+              <div class="table_wrap border">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>년</th>
+                      <th>월</th>
+                      <th>접수</th>
+                      <th>개발</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table_box">
+              <div class="item_title">장애 준수율</div>
+              <div class="table_wrap border">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>년</th>
+                      <th>월</th>
+                      <th>접수</th>
+                      <th>처리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="3">
+                        rpa
+                      </td>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        기타
+                      </td>
+                      <td>2</td>
+                      <td>6</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- accordion end -->
-
+        <!-- paper end-->
 
       </div>
 
-        <div class="footer"></div>
-
+      <div class="footer"></div>
     </div>
   </main>
 
   <script>
     updateTitle('TaskKPIs'); 
-      
-    
-    var options = {
-      series: [76],
-      chart: {
-        type: 'radialBar',
-        sparkline: {
-          enabled: true
-        }
-      },
-      plotOptions: {
-        radialBar: {
-          startAngle: -90,
-          endAngle: 90,
-          track: {
-            background: "#e7e7e7",
-            strokeWidth: '97%',
-            margin: 5,
-          },
-          dataLabels: {
-            name: {
-              show: false
-            },
-            value: {
-              offsetY: -2,
-              fontSize: '22px'
-            }
-          },
-          
-        }
-      },
-      title: {
-          text: ' 누적 수행 오류',
-          align: 'center',
-          margin: 10,
-          floating: false,
-          style: {
-            fontSize:  '14px',
-            fontWeight:  'bold',
-            fontFamily:  'Pretendard',
-            color:  '#333'
-          },
-        },
-      grid: {
-        padding: {
-          top: -10
-        }
-      },
-      fill: {
-        type: 'solid',
-        colors: '#77B6EA',
-      },
-      labels: ['Average Results'],
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart"), options); 
-    chart.render();
-
-
-    var options_A = {
-        series: [
-          {
-            name: "개별 BOT 가동률",
-            data: [28, 29, 33, 36, 32, 32, 33]
-          },
-          {
-            name: "평균 가동률",
-            data: [12, 11, 14, 18, 17, 13, 13]
-          }
-        ],
-        chart: {  
-          height: 300,
-          type: 'line',
-          zoom: {
-            enabled: false
-          },
-          toolbar: {
-            show: false
-          }
-        },
-        colors: ['#77B6EA', '#545454'],
-        dataLabels: {
-          enabled: true,
-        },
-        stroke: {
-          curve: 'smooth'
-        },
-        title: {
-          text: 'BOT 가동률',
-          align: 'center',
-          margin: 10,
-          floating: false,
-          style: {
-            fontSize:  '14px',
-            fontWeight:  'bold',
-            fontFamily:  'Pretendard',
-            color:  '#333'
-          },
-        },
-        grid: {
-          borderColor: '#e7e7e7',
-          row: {
-            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-            opacity: 0.5
-          },
-        },
-        markers: {
-          size: 1
-        },
-        xaxis: {
-          categories: [
-            '24.10', 
-            '24.10', 
-            '24.10', 
-            '24.10', 
-            '24.10', 
-            '24.10', 
-            '24.10'
-          ],
-          title: {
-            text: '월'
-          },
-        },
-        yaxis: {
-          title: {
-            text: '가동률(%)'
-          },
-          min: 0,
-          max: 100
-        },
-        legend: {
-          position: 'top',
-          horizontalAlign: 'right',
-          floating: true,
-          offsetY: -25,
-          offsetX: -5
-        }
-        };
-
-    var chart_A = new ApexCharts(document.querySelector("#chart_A"), options_A); 
-    chart_A.render();
-      
-
   </script>
 
 </body>

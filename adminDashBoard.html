@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대시보드</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <!-- jquery CDN -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script  src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- google font-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- fullcalendar JS -->
+  <script src="/lib/fullcalendar/index.global.min.js"></script>
+  <script src="/lib/apexcharts/apexcharts.min.js"></script>
+  <!-- custom CSS & JS-->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <script src="/script/custom.js"></script>
+</head>
+<body>
+
+  <!-- ////////////// header inclue -->
+  <div class="header"></div>
+
+  <main>
+    <!-- ////////////// menu inclue -->
+    <div class="menu"></div>
+
+    <div class="container">
+
+      <!-- ////////////// myTask inclue -->
+      <div class="myTask"></div>
+
+      <!-- ////////////// pageHeader start -->
+      <div class="page_header">
+        <div class="title_box">
+          <h6 id="page-title"></h6>
+          <p id="page-hint"></p>
+        </div>
+      </div>
+      <!-- pageHeader end -->
+
+      <div class="container_inner adDash">  
+        <div class="tab_menu" id="tabBtn">
+          <button class="tab_button active" data-tab="tab1">과제 현황</button>
+          <button class="tab_button" data-tab="tab2">자동화 ROI</button>
+          <button class="tab_button" data-tab="tab3">운영 모니터</button>
+        </div>
+        
+        <div class="tab_content active" id="tab1">
+          <div class="flex_md donut_box">
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">RPA 인프라 현황</div>
+              </div>
+              <div class="card_body">
+                <div id="donut01"></div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">부서별 현황</div>
+              </div>
+              <div class="card_body">
+                <div id="donut02"></div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">팀별 현황</div>
+              </div>
+              <div class="card_body">
+                <div id="donut03"></div>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <div class="flex_md donut_box"  style="margin-top: var(--space-16);">
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">업무 영역별 현황</div>
+              </div>
+              <div class="card_body">
+                <div id="donut04"></div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">개발 현황</div>
+              </div>
+              <div class="card_body">
+                <div id="donut05"></div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">개발 준수율</div>
+              </div>
+              <div class="card_body">
+                <div id="donut06"></div>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+        </div>
+        <div class="tab_content" id="tab2"> 
+          <div class="flex flex_lg ">
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">RPA 인프라 현황</div>
+              </div>
+              <div class="card_body">
+                <div class="flex_md info_box">
+                  <div class="paper info_bl info">
+                    <div class="felx_column_xs">
+                      <span class="material-symbols-outlined icon">
+                        bar_chart
+                      </span>
+                      <h6>Orchestrator</h6>
+                    </div>
+                    <div class="count_base">
+                      <h3>1</h3>
+                    </div>
+                  </div>
+                  <div class="paper info_sk info">
+                    <div class="felx_column_xs">
+                      <span class="material-symbols-outlined icon">
+                        robot_2
+                      </span>
+                      <h6>Unattended Bot</h6>
+                    </div>
+                    <div class="count_base">
+                      <h3>1</h3>
+                    </div>
+                  </div>
+                  <div class="paper info_gr info">
+                    <div class="felx_column_xs">
+                      <span class="material-symbols-outlined icon">
+                        bar_chart
+                      </span>
+                      <h6>Designer</h6>
+                    </div>
+                    <div class="count_base">
+                      <h3>0</h3>
+                    </div>
+                  </div>
+                  <div class="paper info_ye info">
+                    <div class="felx_column_xs">
+                      <span class="material-symbols-outlined icon">
+                        robot_2
+                      </span>
+                      <h6>Attended Bot</h6>
+                    </div>
+                    <div class="count_base">
+                      <h3>2</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card start -->
+            <div class="card">
+              <div class="card_head">
+                <div class="subtitle02">RPA ROI</div>
+              </div>
+              <div class="card_body">
+                <!-- 투자수익 -->
+                <div class="flex_md info_box">
+                  <div class="paper info_bl info">
+                    <div class="felx_column_xs">
+                      <span class="material-symbols-outlined icon">
+                        attach_money
+                      </span>
+                      <h6>투자수익</h6>
+                    </div>
+                    <div class="count_base">
+                      <h3>100,000</h3>
+                    </div>
+                  </div>
+                  <!-- 절감시간 -->
+                  <div class="paper info_sk info">
+                    <div class="felx_column_xs">
+                      <span class="material-symbols-outlined icon">
+                        schedule
+                      </span>
+                      <h6>연간 절감시간</h6>
+                    </div>
+                    <div class="count_base">
+                      <h3>100,000</h3>
+                      <span>Hr</span>
+                    </div>
+                  </div>
+                  <!-- 인원 -->
+                  <div class="paper info_gr info">
+                    <div class="felx_column_xs">
+                      <span class="material-symbols-outlined icon">
+                        person
+                      </span>
+                      <h6>대체 효과 인원</h6>
+                    </div>
+                    <div class="count_base">
+                      <h3>20</h3>
+                      <span>명</span>
+                    </div>
+                  </div>
+                  <!-- // 인원 end-->
+                </div>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <div class="paper flex flex_md" style="margin-top: var(--space-16);">
+            <div class="table_box">
+              <div class="item_title">부서 TOP5</div>
+              <div class="table_wrap">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col style="width: 60%;">
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>상태</th>
+                      <th>제목</th>
+                      <th>작성자</th>
+                      <th>작성일</th>
+                      <th>조회수</th>
+                      <th>첨부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        1
+                      </td>
+                      <td class="left">
+                        <a href="">제목입니다.</a>
+                      </td>
+                      <td>NTAS</td>
+                      <td>2024.12.12</td>
+                      <td>3</td>
+                      <td><span class="material-symbols-outlined">home</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table_box">
+              <div class="item_title">팀 TOP5</div>
+              <div class="table_wrap">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col style="width: 60%;">
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>상태</th>
+                      <th>제목</th>
+                      <th>작성자</th>
+                      <th>작성일</th>
+                      <th>조회수</th>
+                      <th>첨부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        1
+                      </td>
+                      <td class="left">
+                        <a href="">제목입니다.</a>
+                      </td>
+                      <td>NTAS</td>
+                      <td>2024.12.12</td>
+                      <td>3</td>
+                      <td><span class="material-symbols-outlined">home</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table_box">
+              <div class="item_title">과제 TOP5</div>
+              <div class="table_wrap">
+                <table>
+                  <colgroup>
+                    <col >
+                    <col style="width: 60%;">
+                    <col >
+                    <col >
+                    <col >
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>상태</th>
+                      <th>제목</th>
+                      <th>작성자</th>
+                      <th>작성일</th>
+                      <th>조회수</th>
+                      <th>첨부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        1
+                      </td>
+                      <td class="left">
+                        <a href="">제목입니다.</a>
+                      </td>
+                      <td>NTAS</td>
+                      <td>2024.12.12</td>
+                      <td>3</td>
+                      <td><span class="material-symbols-outlined">home</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab_content" id="tab3">
+          <!-- card start -->
+          <div class="card">
+            <div class="card_head">
+              <div class="subtitle02">오류발생 모니터</div>
+            </div>
+            <div class="card_body">
+              <div id="heatMap"></div>
+            </div>
+          </div>
+          <!-- card end -->
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </main>
+
+  <script>
+    updateTitle('adminDashBoard'); 
+    
+    // donut01
+    var donut01 = {
+      series: [55, 55, 41, 17, 15, 17, 15],
+      labels: ['제안', '검토중', '승인', '반려','개발중','개발완료','보류'],
+      colors: ['#12A4C5', '#40769B', '#12B579','#CD4B37','#EFC246','#828282','#C2C2C2'],
+      chart: {
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          customScale: 0.9,
+          donut: {
+            labels: {
+              show: true,
+              total: {
+                show: Boolean,
+                showAlways: Boolean,
+                label: '총 건수'
+              }
+            }
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 300
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      }
+    };
+    // donut02
+    var donut02 = {
+      series: [55, 55, 41, 17, 15, 17, 15],
+      labels: ['제안', '검토중', '승인', '반려','개발중','개발완료','보류'],
+      colors: ['#BADEF9', '#9FC4E5', '#80ABCF', '#4F85AD', '#306283','#224E6D','#0B3954'],
+      chart: {
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          customScale: 0.9,
+          donut: {
+            labels: {
+              show: true,
+              total: {
+                show: Boolean,
+                showAlways: Boolean,
+                label: '총 건수'
+              }
+            }
+          }
+        },
+        responsive: [{
+          breakpoint: 580,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      }
+    };
+    // donut03
+    var donut03 = {
+      series: [55, 55, 41, 17, 15, 15],
+      labels: ['primary10', 'primary20', 'primary30', 'primary40','primary50','primary90'],
+      colors: ['#B2E8F7', '#80D9F0', '#4EC9E8', '#2BBEE0', '#18B4D9','#0790AB','#005A66'],
+      chart: {
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          customScale: 0.9,
+          donut: {
+            labels: {
+              show: true,
+              total: {
+                show: Boolean,
+                showAlways: Boolean,
+                label: '총 건수'
+              }
+            }
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      }
+    };
+    // donut04
+    var donut04 = {
+      series: [55, 55, 41, 17, 15],
+      labels: ['gray50', 'gray60','gray70','gray80','gray90'],
+      colors: ['#C2C2C2', '#969696', '#828282','#616161','#3D3D3D',],
+      chart: {
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          customScale: 0.9,
+          donut: {
+            labels: {
+              show: true,
+              total: {
+                show: Boolean,
+                showAlways: Boolean,
+                label: '총 건수'
+              }
+            }
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      }
+    };
+    // donut05
+    var donut05 = {
+      series: [55, 55, 41, 17],
+      labels: ['개발대기', '개발중', '개발완료', '보류'],
+      colors: ['#9ADABB', '#4ABF8C', '#009460', '#00613D'],
+      chart: {
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          customScale: 0.9,
+          donut: {
+            labels: {
+              show: true,
+              total: {
+                show: Boolean,
+                showAlways: Boolean,
+                label: '총 건수'
+              }
+            }
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      }
+    };
+    // donut06
+    var donut06 = {
+      series: [55, 55, 41, 17, 15, 17, 15],
+      labels: ['제안', '검토중', '승인', '반려','개발중','개발완료','보류'],
+      // colors: ['#6897BE', '#FF6B6B', '#FFA630', '#FDE74C', '#5BC0EB','#9BC53D','#8D41E4',],
+      colors: ['#F5DA8B', '#EFC246', '#ECAB2F', '#EB9A2B', '#E98B26','#DD9188','#CB665D',],
+      chart: {
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          customScale: 0.9,
+          donut: {
+            labels: {
+              show: true,
+              total: {
+                show: Boolean,
+                showAlways: Boolean,
+                label: '총 건수'
+              }
+            }
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      }
+    };
+    
+    new ApexCharts(document.querySelector("#donut01"), donut01).render();
+    new ApexCharts(document.querySelector("#donut02"), donut02).render();
+    new ApexCharts(document.querySelector("#donut03"), donut03).render();
+    new ApexCharts(document.querySelector("#donut04"), donut04).render();
+    new ApexCharts(document.querySelector("#donut05"), donut05).render();
+    new ApexCharts(document.querySelector("#donut06"), donut06).render();
+        
+    // tab03
+    var heatMap  = {
+      series: [
+        {
+          name: "Series 1",
+          data: [{
+              x: 'W1',
+              y: 22
+            }, 
+            {
+              x: 'W2',
+              y: 29
+            }, 
+            {
+              x: 'W3',
+              y: 13
+            }, 
+            {
+              x: 'W3',
+              y: 13
+            }, 
+            {
+              x: 'W4',
+              y: 32
+            }]
+          },
+          {
+            name: "Series 2",
+            data: [{
+              x: 'W1',
+              y: 43
+            }, 
+            {
+              x: 'W3',
+              y: 13
+            }, 
+            {
+              x: 'W2',
+              y: 43
+            }, 
+            {
+              x: 'W3',
+              y: 43
+            }, 
+            {
+              x: 'W4',
+              y: 43
+            }]
+          },
+          {
+            name: "Series 3",
+            data: [{
+              x: 'W1',
+              y: 43
+            }, 
+            {
+              x: 'W3',
+              y: 13
+            }, 
+            {
+              x: 'W2',
+              y: 43
+            }, 
+            {
+              x: 'W3',
+              y: 43
+            }, 
+            {
+              x: 'W4',
+              y: 43
+            }]
+          }
+        ],
+        chart: {
+        height: 450,
+        type: 'heatmap',
+      },
+      dataLabels: {
+        enabled: false
+      },
+      colors: ["#6897BE"]
+    };
+
+    new ApexCharts(document.querySelector("#heatMap"), heatMap).render();
+
+  </script>
+
+</body>
+</html>

@@ -38,6 +38,9 @@ $(function(){
 // pagetitle
 const pageTitles = {
   asset: 'RPA Portal design asset',
+  dashBoard: '대시보드',
+  adminDashBoard: '운영 대시보드',
+
   TaskDefine: '자동화업무 제안/선정',
   TaskDefineCreate: '자동화 과제요청',
   TaskDeployConfirm: '배포실행/승인',
@@ -127,13 +130,18 @@ $(document).ready(function() {
 
 // .table_box 내의 tab
 $(document).ready(function() {
-  $('.table_box .tab_button').on('click', function() {
-    var activeTab = $(this).attr('data-tab');
+  $('.table_box').each(function() {
+    var $card = $(this); 
 
-    $('.table_box .tab_button').removeClass('active');
-    $('.table_box .tab_content').removeClass('active');
-    $(this).addClass('active');
-    $('#' + activeTab).addClass('active');
+    $card.find('.tab_button').on('click', function() {
+      var activeTab = $(this).attr('data-tab'); 
+
+      $card.find('.tab_button').removeClass('active');
+      $card.find('.tab_content').removeClass('active');
+
+      $(this).addClass('active');
+      $card.find('#' + activeTab).addClass('active');
+    });
   });
 });
 

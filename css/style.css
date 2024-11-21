@@ -119,6 +119,44 @@
   border-bottom: none;
 }
 
+/* ==================== adminDashBoard */
+.adDash .table_wrap {
+  height: 250px;
+}
+.adDash .info_box {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.adDash .card:nth-child(2) .info:nth-child(1) {
+  grid-column: 1 / 3;
+}
+/* ==================== DashBoard */
+.dash .banner_box {
+  flex: 2;
+}
+.dash .banner_wrap {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.dash .paper {
+  flex: 1;
+}
+.dash .table_wrap {
+  height: 250px;
+}
+
+/* ==================== TaskKPI*/
+.container.KPI .table_wrap {
+  height: 300px !important;
+}
+.container.KPI .paper .flex_lg {
+  flex-wrap: wrap;
+}
+.container.KPI .paper .flex > div {
+  width: calc(100% /3 - var(--space-16));
+}
+
 /* ==================== TaskSchedule */
 #tabCalendar select {
   width: 15%;

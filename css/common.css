@@ -27,8 +27,13 @@
   --success5: #E4F6EE;
   --success10: #C0E8D4;
   --success20: #9ADABB;
+  --success30: #6DCAA0;
+  --success40: #4ABF8C;
   --success50: #12B579;
   --success60: #09A56C;
+  --success70: #009460;
+  --success80: #008053;
+  --success90: #00613D;
 
   --warning5: #FCF7E3;
   --warning10: #F9E9B8;
@@ -39,7 +44,9 @@
   --warning80: #E98B26;
 
   --danger5: #FBE8E9;
+  --danger10: #F5C7C7;
   --danger20: #DD9188;
+  --danger30: #CB665D;
   --danger40: #CD4B37;
   --danger50: #CB3A15;
   --danger60: #C03016;
@@ -208,6 +215,30 @@ button.mini:hover {
   background: #fff;
 }
 
+/* shortBtn */
+.shortBtn {
+  margin-top: var(--space-16);
+}
+.shortBtn button {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--btn-wh);
+  padding: var(--space-40) var(--space-24);
+  /* layer Shadow */
+  box-shadow: 0px 5px 5px 0px rgba(51, 51, 51, 0.09);
+  transition: .25s;
+}
+.shortBtn button:hover {
+  box-shadow: 0px 1px 1px 0px rgba(51, 51, 51, 0.09);
+}
+.shortBtn button:hover span.arrow {
+  margin-right: 0;
+  transition: .25s;
+}
+.shortBtn button span {
+  margin-right: var(--space-8);
+}
 
 /* border */
 :root {
@@ -1035,7 +1066,11 @@ table .badge {
   z-index: 1;
 }
 .table_wrap.border table tbody td {
-  border:none;
+  border: none;
+}
+.table_wrap table tbody td[rowspan] { 
+  background-color: var(--gray30);
+  border-bottom: 2px solid var(--wh);
 }
 
 /* count_info */
