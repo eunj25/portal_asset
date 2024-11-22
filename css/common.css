@@ -518,7 +518,7 @@ transition: .25s;
   margin: 0 .3vw 0 0;
 }
 [type='radio']:checked {
-  border: 2.5px solid var(--wh); 
+  border: 2.5008px solid var(--wh); 
   background-color: var(--secondary50);
   box-shadow: 0 0 0 1px var(--secondary50);
 }
@@ -754,6 +754,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header .menuToggle {
+  display: none;
+  padding: var(--space-4);
+  border-radius: var(--border-radius);
+}
+header .menuToggle:hover {
+  background-color: #000;
 }
 
 header .profile_box {
@@ -1265,7 +1273,7 @@ button.step_btutton.active em {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 1;
   background-color: #3333332a;
   display: none;
 }

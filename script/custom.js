@@ -16,8 +16,13 @@ $(function(){
         $('.bg').fadeOut(200);
         $('#myPage').fadeOut(200);
       });
-    });
 
+      $('.menuToggle').on('click', function(){
+        // $('.bg').fadeToggle(200);
+        $('nav').toggleClass('active');
+      })
+    });
+  
   $('.myTask').load('/include/myTask.html',
     function(){
       $('.myTask_box_icon').on('click', function() {
