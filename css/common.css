@@ -347,6 +347,7 @@ textarea {
   transition: 0.25s;
   color: var(--bk);
   cursor: pointer;
+  background-color: var(--wh);
 }
 input:hover,
 select:hover,
@@ -589,19 +590,19 @@ transition: .25s;
   --modal-max-height: 800px;
 
   /* padding */
-  --space-4: 4px;
-  --space-6: 6px;
-  --space-8: 8px;
-  --space-10: 10px;
-  --space-12: 12px;
-  --space-16: 16px;
-  --space-24: 24px;
-  --space-40: 40px;
+  --space-4: .25rem;
+  --space-6: .375rem;
+  --space-8: .5rem;
+  --space-10: .625rem;
+  --space-12: .75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-40: 2.5rem;
 
   /* table */
-  --th-padding: 6px 8px;
-  --td-padding: 6px 10px;
-  --search-padding: 12px 18px;
+  --th-padding: .375rem .5rem;
+  --td-padding: .375rem .625rem;
+  --search-padding: .75rem 1.125rem;
 }
 
 .position_center {
@@ -826,6 +827,13 @@ nav .sub_menu a:hover {
   overflow-y: scroll;
 }
 
+.container_inner {
+  padding: 0 var(--space-40);
+  display: flex;
+  gap: var(--space-16);
+  flex-direction: column;
+}
+
 /* page_header */
 .page_header {
   display: flex;
@@ -842,13 +850,6 @@ nav .sub_menu a:hover {
 .page_btn {
   display: flex;
   gap: var(--space-4);
-}
-
-.container_inner {
-  padding: 0 var(--space-40);
-  display: flex;
-  gap: var(--space-16);
-  flex-direction: column;
 }
 
 /* paper */
