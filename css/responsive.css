@@ -51,11 +51,6 @@
     height: 18px;
   }
 
-  /* ==================== login */
-  .container.login .login_wrap {
-    width: 50% !important;
-  }
-  
   /* 대시보드 */
   .dash .banner_box {
     width: 100%;
@@ -69,6 +64,15 @@
 /* 테블릿 */ 
 @media all and (min-width:768px) and (max-width:1199px) {
   
+  /* ==================== login */
+  .container.login .login_wrap {
+    width: 50% !important;
+  }
+
+  #myPage .flex_md > div {
+    width: 100%;
+  }
+    
   /* 대시보드 */
   .adDash .donut_box {
     display: grid;
@@ -76,9 +80,17 @@
     grid-template-columns: 1fr 1fr;
   }
 
-
+  .container.KPI .paper .flex > div {
+    width: 100%;
+  }
 } 
 
 /* 모바일 */ 
 @media all and (min-width:360px) and (max-width:767px) {
+  
+  /* ==================== login */
+  .container.login .login_wrap {
+    width: 90% !important;
+  }
+
 }
