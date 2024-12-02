@@ -135,7 +135,7 @@ $(document).ready(function() {
 
 // .table_box 내의 tab
 $(document).ready(function() {
-  $('.table_box').each(function() {
+  $('.card').each(function() {
     var $card = $(this); 
 
     $card.find('.tab_button').on('click', function() {
