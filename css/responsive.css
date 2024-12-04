@@ -73,11 +73,6 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-
-  .KPI .info_box {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
   .KPI .info_box .info:nth-child(1){
     grid-column: 1 / 3;
   }
