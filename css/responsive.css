@@ -8,7 +8,8 @@
   .flex_lg,
   .flex_md,
   .flex_sm {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
   }
   .paper {
     padding: var(--space-8);
@@ -109,19 +110,12 @@
     align-items: flex-start !important;
     gap: 4px;
   }
-  /* ==================== login */
-  .container.login .login_wrap {
-    width: 90% !important;
-  }
   .badge {
     width: 100%;
   }
-  #tabCalendar .flex_sm_center {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-  #tabCalendar .flex_sm_center select {
-    width: 100%;
+  .paper.info { 
+    min-width: 222px;
+    max-width: 300px;
   }
   .item_list {
     flex-direction: column !important;
@@ -134,6 +128,19 @@
     flex-direction: column !important;
     align-items: flex-start !important;
   }
+  /* ==================== login */
+  .container.login .login_wrap {
+    width: 90% !important;
+  }
+  /* ==================== TaskSchedule */
+  #tabCalendar .flex_sm_center {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  #tabCalendar .flex_sm_center select {
+    width: 100%;
+  }
+  /* ==================== KPI */
   .container.KPI .paper .flex > div {
     width: 100% !important;
 
