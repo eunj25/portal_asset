@@ -105,6 +105,7 @@
     align-items: flex-start !important;
     gap: 4px;
   }
+
   .badge {
     width: 100%;
   }
@@ -138,6 +139,49 @@
   /* ==================== KPI */
   .container.KPI .paper .flex > div {
     width: 100% !important;
-
   }
+
+
+  .search_box tbody tr {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    flex: 1;
+  }
+  .table_wrap thead {
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	.table_wrap table tbody th {
+		display: block;
+	}
+  .table_wrap table tbody tr {
+		border-top: 3px solid gray;
+		border-bottom: 3px solid #ddd;
+		display: block;
+		margin-bottom: .625em;
+    width: 100% !important;
+    height:  auto !important;
+	}
+	.table_wrap table tbody td {
+		border-bottom: 1px solid #ddd;
+		display: block;
+		font-size: .8em;
+		text-align: right;
+    width: 100% !important;
+	}
+
+	.table_wrap td::before {
+		content: attr(data-label); /*data-label을 가상요소 표출*/
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
 }
