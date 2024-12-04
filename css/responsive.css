@@ -50,7 +50,9 @@
   .table_wrap table tbody td.left div { 
     height: 18px;
   }
-
+  .myTask_box {
+    right: -320px;
+  }
   /* 대시보드 */
   .dash .banner_box {
     width: 100%;
@@ -59,10 +61,25 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
 }
 
 /* 테블릿 */ 
 @media all and (min-width:768px) and (max-width:1199px) {
+  
+  .info_box {
+    display: grid !important;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .KPI .info_box {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .KPI .info_box .info:nth-child(1){
+    grid-column: 1 / 3;
+  }
   
   /* ==================== login */
   .container.login .login_wrap {
@@ -87,10 +104,38 @@
 
 /* 모바일 */ 
 @media all and (min-width:360px) and (max-width:767px) {
-  
+  .page_header .title_box {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px;
+  }
   /* ==================== login */
   .container.login .login_wrap {
     width: 90% !important;
   }
+  .badge {
+    width: 100%;
+  }
+  #tabCalendar .flex_sm_center {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  #tabCalendar .flex_sm_center select {
+    width: 100%;
+  }
+  .item_list {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .count_info_list {
+    border: none;
+  }
+  .flex_xs {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .container.KPI .paper .flex > div {
+    width: 100% !important;
 
+  }
 }
