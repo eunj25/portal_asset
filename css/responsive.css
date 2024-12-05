@@ -122,7 +122,9 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-  
+  .caption {
+    text-wrap: auto;
+  }
   .flex_xs {
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -158,8 +160,6 @@
     width: 100%;
   }
 
-  .search_box table {
-  }
   .search_box tbody tr {
     width: 100% !important;
   }
@@ -170,11 +170,35 @@
     table-layout: fixed;
   }
 
+  /* modal */
+  #prompt.modal {
+    min-width: var(--modal-min-mobile-width);
+    max-width: var(--modal-max-mobile-width);
+    height: var(--modal-max-mobile-height);
+  }
+  #prompt.modal_body {
+    align-items: stretch;
+    justify-content: center;
+    height: 98%;
+    padding: 0 var(--space-12);
+  }
+  .modal .btn_area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
   /* ==================== login */
   .container.login .login_wrap {  
     width: 90% !important;
   }
-
+  
+  /* ==================== myPage */
+  #myPage .flex_md > div {
+    width: 100% !important;
+  }
+  #myPage .photo {
+    width: 50%;
+  }
   /* ==================== 대시보드 */
   .adDash .donut_box {
     flex-direction: column !important;
@@ -215,6 +239,52 @@
   }
   .fc .fc-button {
     font-size: .8em;
+  }
+  /* TaskSchedule: modal */
+  .modal.schedule,
+  .modal.botSet {
+    min-width: 320px !important;
+    max-width: 400px !important;
+    min-height: 550px;
+  }
+  .tab_menu.stepArea {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    /* flex-direction: column;
+    align-items: flex-start; */
+    padding: var(--space-8);
+  }
+  .tab_menu.stepArea button span { 
+    display: none;
+  }
+  button.step_btutton em {
+    margin-left: 0;
+  }
+  .modal.schedule .input_wrap:nth-child(2) .flex_sm_center {
+    flex-direction: column !important;
+  }
+  .modal.schedule .checkbox_wrap {
+    width: 100%;
+  }
+  .modal.schedule .input_wrap:nth-child(3) .control_wrap {
+    flex-direction: row !important;
+  }
+  .modal.schedule #step-4 .flex_sm_center {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal.schedule .modal_body,
+  .modal.botSet .modal_body {
+    overflow-y: scroll;
+    height: var(--modal-max-mobile-height);
+  }
+  .modal.botSet .flex_sm {
+    flex-direction: column;
+  }
+  .modal.botSet .table_wrap {
+    height: 20vh;
   }
   /* ==================== KPI */
   .container.KPI .info_box  {
