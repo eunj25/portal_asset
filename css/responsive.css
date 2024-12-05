@@ -3,21 +3,14 @@
 @media all and (min-width:360px) and (max-width:1199px) {
   /* common */
   body {
-    font-size: 1rem;
+    font-size: .9rem;
   }
   .flex_lg,
   .flex_md,
   .flex_sm {
-    /* flex-direction: column; */
     flex-wrap: wrap;
   }
-  .paper {
-    padding: var(--space-8);
-  }
-  .card {
-    width: 100%;
-  }
-
+  /* header */
   header {
     position: relative;
     z-index: 99;
@@ -46,15 +39,16 @@
     width: 100%;
     padding: 0 var(--space-16) !important;
   }
-
+  /* table */
   .table_wrap table tbody td a,
   .table_wrap table tbody td.left div { 
     height: 18px;
   }
+  /* ==================== myTask */
   .myTask_box {
     right: -320px;
   }
-  /* 대시보드 */
+  /* ==================== dash */
   .dash .banner_box {
     width: 100%;
   }
@@ -67,55 +61,69 @@
 
 /* 테블릿 */ 
 @media all and (min-width:768px) and (max-width:1199px) {
-  
+  .paper {
+    padding: var(--space-8);
+  }
+  .card {
+    width: 100%;
+  }
   .info_box {
     display: grid !important;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-  .KPI .info_box .info:nth-child(1){
-    grid-column: 1 / 3;
-  }
-  
+
   /* ==================== login */
   .container.login .login_wrap {
     width: 50% !important;
   }
-
   #myPage .flex_md > div {
     width: 100%;
   }
-    
-  /* 대시보드 */
+  /* ==================== 대시보드 */
   .adDash .donut_box {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
+  /* ==================== KPI */
   .container.KPI .paper .flex > div {
     width: 100%;
+  }
+  .KPI .info_box .info:nth-child(1){
+    grid-column: 1 / 3;
   }
 } 
 
 /* 모바일 */ 
 @media all and (min-width:360px) and (max-width:767px) {
+  /* header */
+  header .profile_box .profile {
+    display: none;
+  }
   .page_header .title_box {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 4px;
   }
-
+  /* badge */
   .badge {
     width: 100%;
   }
-  .paper {
-    border: none;
-    padding: none;
+  /* info_box */
+  .flex_md.info_box {
+    display: grid !important;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
-  .paper.info { 
-    min-width: 222px;
-    max-width: 300px;
+  /* paper */
+  .paper.info {
+    height: 100px;
+  }
+  .flex_xs {
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
   .item_list {
     flex-direction: column !important;
@@ -124,13 +132,42 @@
   .count_info_list {
     border: none;
   }
-  .flex_xs {
-    flex-direction: column !important;
-    align-items: flex-start !important;
+
+  /* search_box */
+  .search_box table {
   }
+  .search_box tbody tr {
+    width: 100% !important;
+  }
+  .search_box tbody th,
+  .search_box tbody td {
+    display: block;
+    min-width: 100% !important;
+    table-layout: fixed;
+  }
+
   /* ==================== login */
-  .container.login .login_wrap {
+  .container.login .login_wrap {  
     width: 90% !important;
+  }
+
+  /* ==================== 대시보드 */
+  .adDash .donut_box {
+    flex-direction: column !important;
+  }
+  .adDash .donut_box .card {
+    width: 100% !important;
+  }
+  .adDash .info_box {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .adDash .info_box .paper.info { 
+    min-width: 222px;
+    max-width: 100%;
+  }
+  .dash .flex_lg {
+    flex-direction: column !important;
   }
   /* ==================== TaskSchedule */
   #tabCalendar .flex_sm_center {
@@ -145,6 +182,9 @@
     overflow: scroll;
     margin-bottom: var(--space-8);
   }
+  .paper #calendar {
+    height: 50vh;
+  }
   .fc .fc-button .fc-icon,
   .fc .fc-toolbar-title {
     font-size: 1em;
@@ -153,22 +193,28 @@
     font-size: .8em;
   }
   /* ==================== KPI */
+  .container.KPI .info_box  {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .container.KPI .info_box .paper.info {
+    height: 150px !important;
+  }
   .container.KPI .paper .flex > div {
     width: 100% !important;
   }
-
-
-  .search_box table {
+  /* ==================== infoValue */
+  .container.infoValue .flex_lg {
+    flex-direction: column !important;
   }
-  .search_box tbody tr {
-    width: 100% !important;
+  /* ==================== board */
+  .container_inner.board .flex_lg {
+    gap: var(--space-8) !important;
   }
-  .search_box tbody th,
-  .search_box tbody td {
-    display: block;
-    min-width: 100% !important;
-    table-layout: fixed;
+  .container_inner.board .profile_box {
+    display: none;
   }
-
-
+  .container_inner.board .flex_md button {
+    width: 100%;
+  }
 }
