@@ -251,6 +251,7 @@ button.mini:hover {
   --list-padding-lg: 16px 24px;
   --list-padding-md: 12px 24px;
   --list-padding-sm: 8px 24px;
+  --list-padding-mobile: 8px 12px;
 
   --list-hover-gy: var(--gray30);
   --list-hover-bl: var(--secondary5);
