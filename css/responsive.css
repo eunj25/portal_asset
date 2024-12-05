@@ -109,6 +109,10 @@
   .badge {
     width: 100%;
   }
+  .paper {
+    border: none;
+    padding: none;
+  }
   .paper.info { 
     min-width: 222px;
     max-width: 300px;
@@ -136,52 +140,35 @@
   #tabCalendar .flex_sm_center select {
     width: 100%;
   }
+  .btnMark {
+    width: 100%;
+    overflow: scroll;
+    margin-bottom: var(--space-8);
+  }
+  .fc .fc-button .fc-icon,
+  .fc .fc-toolbar-title {
+    font-size: 1em;
+  }
+  .fc .fc-button {
+    font-size: .8em;
+  }
   /* ==================== KPI */
   .container.KPI .paper .flex > div {
     width: 100% !important;
   }
 
 
-  .search_box tbody tr {
-    display: flex;
-    flex-direction: column;
-    width: 100% !important;
-    flex: 1;
+  .search_box table {
   }
-  .table_wrap thead {
-		border: none;
-		clip: rect(0 0 0 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	}
-	.table_wrap table tbody th {
-		display: block;
-	}
-  .table_wrap table tbody tr {
-		border-top: 3px solid gray;
-		border-bottom: 3px solid #ddd;
-		display: block;
-		margin-bottom: .625em;
+  .search_box tbody tr {
     width: 100% !important;
-    height:  auto !important;
-	}
-	.table_wrap table tbody td {
-		border-bottom: 1px solid #ddd;
-		display: block;
-		font-size: .8em;
-		text-align: right;
-    width: 100% !important;
-	}
+  }
+  .search_box tbody th,
+  .search_box tbody td {
+    display: block;
+    min-width: 100% !important;
+    table-layout: fixed;
+  }
 
-	.table_wrap td::before {
-		content: attr(data-label); /*data-label을 가상요소 표출*/
-		float: left;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
 
 }
