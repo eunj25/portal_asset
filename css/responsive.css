@@ -243,9 +243,9 @@
   /* TaskSchedule: modal */
   .modal.schedule,
   .modal.botSet {
-    min-width: 320px !important;
-    max-width: 400px !important;
-    min-height: 550px;
+    min-width: 70vw !important;
+    max-width: 95vw !important;
+    max-height: var(--modal-max-mobile-height) !important;
   }
   .tab_menu.stepArea {
     display: grid;
@@ -275,16 +275,29 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .modal.schedule .modal_body,
-  .modal.botSet .modal_body {
+  .modal.botSet .modal_desc {
     overflow-y: scroll;
-    height: var(--modal-max-mobile-height);
+    height: 50vh;
+  }
+  .modal.schedule .step_content {
+    overflow-y: scroll;
+    height: 45vh;
   }
   .modal.botSet .flex_sm {
     flex-direction: column;
   }
   .modal.botSet .table_wrap {
     height: 20vh;
+  }
+  #step-1 .checkbox_wrap .label_box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    flex: 1;
+  }
+  #step-1 .checkbox_wrap .label_box input {
+    width: 90% !important;
+    margin-left: var(--space-24) !important;
   }
   /* ==================== KPI */
   .container.KPI .info_box  {
