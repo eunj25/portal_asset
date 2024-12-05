@@ -193,6 +193,14 @@
   }
   
   /* ==================== myPage */
+  #myPage {
+    height: 90vh;
+    width: 80%;
+  }
+  #myPage .modal_body {
+    overflow-y: scroll;
+    height: calc(90vh - 8vh);
+  }
   #myPage .flex_md > div {
     width: 100% !important;
   }
@@ -241,12 +249,19 @@
     font-size: .8em;
   }
   /* TaskSchedule: modal */
-  .modal.schedule,
-  .modal.botSet {
-    min-width: 70vw !important;
-    max-width: 95vw !important;
-    max-height: var(--modal-max-mobile-height) !important;
+  .modal.schedule {
+    min-width: 90% !important;
+    max-width: 90% !important;
+    min-height: 50vh !important;
+    max-height: 80vh !important;
   }
+  .modal.botSet{
+    min-width: 94% !important;
+    max-width: 94% !important;
+    min-height: 50vh !important;
+    max-height: 80vh !important;
+  }
+
   .tab_menu.stepArea {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -281,7 +296,7 @@
   }
   .modal.schedule .step_content {
     overflow-y: scroll;
-    height: 45vh;
+    height: calc(80vh - 32vh);
   }
   .modal.botSet .flex_sm {
     flex-direction: column;
