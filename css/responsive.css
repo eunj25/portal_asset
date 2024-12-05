@@ -194,12 +194,12 @@
   
   /* ==================== myPage */
   #myPage {
-    height: 90vh;
-    width: 80%;
+    height: 80vh !important;
+    width: 80% !important;
   }
   #myPage .modal_body {
     overflow-y: scroll;
-    height: calc(90vh - 8vh);
+    height: calc(80vh - 8vh);
   }
   #myPage .flex_md > div {
     width: 100% !important;
