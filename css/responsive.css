@@ -3,7 +3,7 @@
 @media all and (min-width:360px) and (max-width:1199px) {
   /* common */
   body {
-    font-size: .9rem;
+    font-size: .87rem;
   }
   .flex_lg,
   .flex_md,
@@ -86,13 +86,19 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-
+  .dash .flex_lg {
+    flex-direction: column !important;
+  }
   /* ==================== KPI */
   .container.KPI .paper .flex > div {
     width: 100%;
   }
   .KPI .info_box .info:nth-child(1){
     grid-column: 1 / 3;
+  }
+  /* ==================== board */
+  .container_inner.board .flex_lg {
+    gap: var(--space-8) !important;
   }
 } 
 
@@ -141,7 +147,7 @@
     padding: var(--list-padding-mobile);
   }
 
-  /* search_box */
+  /* table_top_wrap */
   .table_top_wrap {
     flex-direction: column !important;
   }
@@ -159,7 +165,10 @@
   .table_top_wrap .aera button {
     width: 100%;
   }
-
+  /* search_box */
+  .search_box colgroup {
+    display: none;
+  }
   .search_box tbody tr {
     width: 100% !important;
   }
@@ -171,6 +180,15 @@
   }
 
   /* modal */
+  :root {
+    --modal-min-mobile-width: 80%;
+    --modal-max-mobile-width: 80%;
+    --modal-max-mobile-height: 80vh;
+  }
+  .modal {
+    min-width: var(--modal-min-mobile-width);
+    max-width: var(--modal-max-mobile-width);
+  }
   #prompt.modal {
     min-width: var(--modal-min-mobile-width);
     max-width: var(--modal-max-mobile-width);
