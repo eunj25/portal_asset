@@ -57,6 +57,11 @@
     flex-wrap: wrap;
   }
 
+  /* ==================== board */
+  .container_inner.board .flex_md button {
+    width: 100%;
+  }
+
 }
 
 /* 테블릿 */ 
@@ -314,7 +319,7 @@
   }
   .modal.schedule .step_content {
     overflow-y: scroll;
-    height: calc(80vh - 32vh);
+    height: calc(80vh - 50vh);
   }
   .modal.botSet .flex_sm {
     flex-direction: column;
@@ -331,6 +336,9 @@
   #step-1 .checkbox_wrap .label_box input {
     width: 90% !important;
     margin-left: var(--space-24) !important;
+  }
+  #step-2 .table_top_wrap {
+    flex-direction: row !important;
   }
   /* ==================== KPI */
   .container.KPI .info_box  {
@@ -354,7 +362,5 @@
   .container_inner.board .profile_box {
     display: none;
   }
-  .container_inner.board .flex_md button {
-    width: 100%;
-  }
+
 }
