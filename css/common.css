@@ -586,10 +586,6 @@ transition: .25s;
   --menu-width: 280px;
   --header-height: 60px;
 
-  --modal-min-width: 420px;
-  --modal-max-width: 520px;
-  --modal-max-height: 800px;
-
   /* padding */
   --space-4: .25rem;
   --space-6: .375rem;
