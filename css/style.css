@@ -134,7 +134,8 @@
 
 /* ==================== DashBoard */
 .dash .banner_box {
-  flex: 3;
+  /* flex: 3; */
+  width: 60%;
 }
 .dash > .flex_lg {
   align-items: stretch;
@@ -142,15 +143,46 @@
 .dash .banner_wrap {
   border-radius: var(--border-radius);
   overflow: hidden;
-  height: 78%;
+  /* height: 78%; */
+  border: var(--border);
 }
 .dash .banner_wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+/* slick custom */
+.slick-dots {
+  bottom: 10px;
+}
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 26px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .dash .paper {
-  flex: 2;
+  /* flex: 2; */
+  width: 40%;
 }
 .dash .table_wrap {
   height: 250px;
@@ -216,13 +248,23 @@
 .container.KPI .table_wrap {
   height: 300px !important;
 }
+.container.KPI .paper .search_box {
+  margin-bottom: var(--space-16);
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
 .container.KPI .paper .flex_lg {
   flex-wrap: wrap;
 }
 .container.KPI .paper .flex > div {
   width: calc(100% /3 - var(--space-16));
 }
-
+.container.KPI .badge {
+  margin-bottom: var(--space-8);
+  width: 100%;
+  font-weight: bold
+}
 /* ==================== TaskSchedule */
 #tabCalendar select {
   width: 15%;
@@ -284,7 +326,7 @@
   width: 190px;
 }
 
-
+/* custom FullCalendar */
 .fc-theme-standard .fc-popover {
   border: none;
   border-radius: var(--border-radius);
@@ -395,5 +437,3 @@
   display: block;
 }
 
-
-/* custom FullCalendar */

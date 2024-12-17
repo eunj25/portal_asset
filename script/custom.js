@@ -18,8 +18,7 @@ $(function(){
       });
 
       $('.menuToggle').on('click', function(){
-        // $('.bg').fadeToggle(200);
-        $('nav').toggleClass('active');
+        $('nav').toggleClass('display');
       })
     });
   
@@ -34,12 +33,79 @@ $(function(){
         $('.myTask_box, .myTask_box_icon').removeClass('active');
       });
     
-    }
-  )
-  $('.menu').load('/include/menu.html')
+    })
+
+    $('.menu').load('/include/menu.html', function() {
+      // nav toggle 버튼 클릭 이벤트
+      $('.navToggleBtn').on('click', function() {
+        $('nav').toggleClass('active');
+        $('.container').toggleClass('active');
+    
+        // active가 해제되었을 때 .sub_tit 항상 보이도록 설정
+        if (!$('nav').hasClass('active')) {
+          $('.sub_menu a .sub_tit').css({
+            'visibility': 'visible',
+            'display': 'block',
+            'opacity': 1,
+            'position': 'static'
+          });
+        } else {
+          // active 상태에서 기본 숨김
+          $('.sub_menu a .sub_tit').css({
+            'visibility': 'hidden',
+            'display': 'none',
+            'opacity': 0
+          });
+        }
+      });
+    
+      // 아이콘 hover 시 sub_tit의 위치 설정 (nav.active 상태일 때만)
+      $('.sub_menu a > span').on('mousemove', function(e) {
+        if ($('nav').hasClass('active')) {
+          const subTit = $(this).next('.sub_tit');
+          subTit.css({
+            'visibility': 'visible',
+            'opacity': 1,
+            'display': 'block',
+            'position': 'fixed', // 화면 기준 위치 설정
+            'left': e.clientX + 10 + 'px',
+            'top': e.clientY + 10 + 'px',
+            'z-index': 9999
+          });
+        }
+      });
+    
+      // 마우스가 떠나면 sub_tit 숨기기
+      $('.sub_menu a > span').on('mouseleave', function() {
+        if ($('nav').hasClass('active')) {
+          const subTit = $(this).next('.sub_tit');
+          subTit.css({
+            'visibility': 'hidden',
+            'opacity': 0,
+            'display': 'none',
+          });
+        }
+      });
+
+      // 화면 리사이즈 시 active 클래스 제거 (1199px 이하)
+      $(window).on('resize', function() {
+        if ($(window).width() <= 1199) {
+          $('nav').removeClass('active');
+          $('.container').removeClass('active');
+          $('.sub_menu a .sub_tit').css({
+            'visibility': 'visible',
+            'opacity': 1,
+            'display': 'block',
+            'position': 'static'
+          });
+        }
+      });
+      
+    });
+    
   $('.footer').load('/include/footer.html')
 })
-  
+
 // pagetitle
 const pageTitles = {
   asset: 'RPA Portal design asset',
